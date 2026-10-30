@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ua-es.github.io/ua-es/sitemap.xml
