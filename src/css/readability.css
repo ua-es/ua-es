@@ -1,0 +1,317 @@
+.eyebrow,
+.detail-copy .eyebrow {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.modal-heading .eyebrow {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.09em;
+  max-width: 100%;
+  padding-right: 36px;
+}
+header .brand-lockup,
+footer .brand-lockup {
+  width: 190px;
+  max-width: none;
+  flex: none;
+}
+header .brand-logo,
+footer .brand-logo {
+  width: 100%;
+  height: 44px;
+  margin: 0;
+}
+header .brand-lockup small,
+footer .brand-lockup small {
+  font:
+    600 12px/1.4 Manrope,
+    sans-serif;
+  letter-spacing: 0.11em;
+  white-space: normal;
+  text-align: center;
+}
+header .brand {
+  gap: 12px;
+}
+header .header-controls {
+  flex-shrink: 0;
+}
+#geography .map-pin span {
+  font-size: 12px;
+  line-height: 1.25;
+}
+#city-modal .city-modal-cover {
+  height: clamp(210px, 32vw, 320px);
+  overflow: hidden;
+  position: relative;
+  background: var(--soft);
+}
+#city-modal .city-modal-cover img:not(.popup-art) {
+  display: block;
+  position: static;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 20px 55px 16px;
+  object-fit: contain;
+  transform: none;
+  margin: 0;
+}
+#city-modal .city-modal-cover .popup-art {
+  display: none;
+}
+#city-modal .detail-copy {
+  position: relative;
+  margin: 0;
+  padding: clamp(22px, 4vw, 42px);
+}
+#city-modal .detail-copy h2 {
+  font-size: clamp(38px, 6vw, 64px);
+  overflow-wrap: anywhere;
+}
+#city-modal .detail-copy .eyebrow {
+  padding: 0;
+}
+.together-block {
+  padding: 46px 0;
+  border-radius: 0;
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+.together-block h2 {
+  text-align: center;
+  font:
+    700 clamp(34px, 4vw, 58px)/1.08 Cormorant,
+    Georgia,
+    serif;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.together-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 46px);
+  margin-top: 28px;
+}
+.together-steps article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+}
+.together-steps .together-art {
+  display: block;
+  width: 100%;
+  height: clamp(160px, 17vw, 230px);
+  object-fit: contain;
+  object-position: center bottom;
+  margin-bottom: 16px;
+}
+.together-steps h3 {
+  font:
+    700 clamp(27px, 2.6vw, 34px)/1.13 Cormorant,
+    Georgia,
+    serif;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.together-steps p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.together-block > p {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding-top: 22px;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+}
+.venue-photo img {
+  object-position: center;
+}
+.venue-photo:first-child img {
+  object-position: 50% 41%;
+}
+.venue-caption {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.venue-lightbox {
+  max-height: 94vh;
+  max-height: 94dvh;
+  overflow-y: auto;
+}
+.venue-lightbox .venue-lightbox-image {
+  display: block;
+  height: 65vh;
+  width: 100%;
+  max-height: 65dvh;
+  object-fit: contain;
+}
+.venue-lightbox .venue-lightbox-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+.venue-lightbox .venue-lightbox-controls button {
+  position: static;
+  min-width: 44px;
+  min-height: 44px;
+}
+.venue-lightbox .venue-lightbox-caption {
+  text-align: center;
+  margin: 12px auto 0;
+  max-width: 760px;
+  font-size: 15px;
+}
+.venue-lightbox .venue-lightbox-counter {
+  min-width: 4em;
+  text-align: center;
+  color: var(--ink);
+}
+@media (max-width: 1100px) {
+  header .brand-lockup {
+    width: 174px;
+  }
+  header .brand-logo {
+    height: 40px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    padding-inline: 4%;
+    gap: 8px;
+  }
+  header .brand {
+    gap: 5px;
+  }
+  header .brand-lockup {
+    width: 162px;
+  }
+  header .brand-logo {
+    height: 38px;
+  }
+  header .brand-flags {
+    width: 28px;
+  }
+  .together-block {
+    padding-block: 32px;
+  }
+  .together-steps {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .together-steps article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(115px, 42%);
+    column-gap: 16px;
+    align-items: center;
+  }
+  .together-steps .together-art {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    height: 170px;
+    margin: 0;
+  }
+  .together-steps h3 {
+    grid-column: 1;
+    align-self: end;
+  }
+  .together-steps p {
+    grid-column: 1;
+    align-self: start;
+  }
+  .together-block > p {
+    text-align: left;
+  }
+  #city-modal .city-modal-cover img:not(.popup-art) {
+    padding: 18px 35px 12px;
+  }
+}
+@media (max-width: 380px) {
+  header .brand-lockup {
+    width: 145px;
+  }
+  header .brand-lockup small {
+    letter-spacing: 0.025em;
+  }
+  header .brand-flags {
+    width: 22px;
+  }
+  header .header-controls {
+    gap: 3px;
+  }
+  .together-steps article {
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 0 12px;
+  }
+}
+#mobile-navigation {
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  background: var(--paper);
+  color: var(--ink);
+}
+#mobile-navigation .dialog-content {
+  overflow: visible;
+}
+#mobile-navigation nav {
+  display: flex;
+  position: static;
+  inset: auto;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding: 18px 0 0;
+  border: 0;
+  background: transparent;
+}
+#mobile-navigation nav a {
+  display: block;
+  min-height: 48px;
+  padding: 12px 0;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  line-height: 1.4;
+}
+#mobile-navigation nav a:is(:hover, :focus-visible) {
+  color: var(--orange);
+  text-decoration: underline dotted;
+  text-underline-offset: 6px;
+}
+#mobile-navigation nav a[aria-current] {
+  font-weight: 800;
+}
+@media (min-width: 361px) and (max-width: 760px) {
+  header {
+    flex-wrap: nowrap;
+    padding-inline: 3%;
+  }
+  header .brand-lockup {
+    width: 146px;
+  }
+  header .brand-lockup small {
+    letter-spacing: 0.04em;
+  }
+  header .brand-flags {
+    width: 20px;
+  }
+  header .header-controls {
+    gap: 4px;
+  }
+  header .header-controls :is(button, select) {
+    min-width: 40px;
+    width: 40px;
+    padding-inline: 6px;
+  }
+  header .header-controls #language-choice {
+    width: 58px;
+  }
+}

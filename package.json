@@ -1,0 +1,33 @@
+{
+  "name": "picnuc.ua.es",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "test": "npm run test:unit && playwright test",
+    "test:unit": "node --test tests/*.test.js",
+    "test:e2e": "playwright test",
+    "format": "prettier --write build.js src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ua-es/ua-es.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ua-es/ua-es/issues"
+  },
+  "homepage": "https://github.com/ua-es/ua-es#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "esbuild": "^0.28.2",
+    "prettier": "^3.9.10"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

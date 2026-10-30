@@ -14,5 +14,13 @@ Desktop.ini
 # Local editor logs
 .vscode/*.log
 
+# Local AI and MCP configuration
+.ai/
+
 # JetBrains IDE settings
 .idea/
+
+# Node
+node_modules/
+playwright-report/
+test-results/

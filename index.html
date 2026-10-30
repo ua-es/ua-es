@@ -10,7 +10,8 @@
     <script>(()=>{const e=["auto","day","night"];let t="day";try{t=localStorage.getItem("picnic-theme")||"day"}catch{}function c(c){t=e.includes(c)?c:"day";const n=(new Date).getHours(),a="auto"===t?n>=7&&n<20?"day":"night":t;document.documentElement.dataset.theme=a,document.documentElement.style.colorScheme="night"===a?"dark":"light"}e.includes(t)||(t="day"),window.picnicTheme={get choice(){return t},set(e){c(e);try{localStorage.setItem("picnic-theme",t)}catch{}}},c(t),setInterval(()=>c(t),6e4),document.addEventListener("visibilitychange",()=>{document.hidden||c(t)})})();</script>
     <link rel="preload" href="assets/Manrope.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="css/index.min.css">
-    <script defer="defer" src="js/image-health.js"></script>
+    <script defer src="js/locale-uk.js"></script>
+    <script defer src="js/shared.js"></script>
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Тепла зустріч">
@@ -23,10 +24,9 @@
     <meta property="og:locale" content="uk_UA">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Тепла зустріч","url":"./","inLanguage":["uk","es","en"],"description":"Пікніки українців в Іспанії: формат, меню, організаційний збір, найближча зустріч, допомога та співпраця. Приходьте навіть якщо нікого не знаєте."}</script>
     <link imagesizes="100vw" imagesrcset="images/avif/archive-forest-640.avif 640w,images/avif/archive-forest-960.avif 960w,images/avif/archive-forest.avif 1280w" type="image/avif" as="image" rel="preload">
-    <script defer="defer" src="js/image-variants.js"></script>
-    <script defer="defer" src="js/responsive-images.js"></script>
+
     <link rel="stylesheet" href="css/readability.min.css" data-readability="">
-    <script src="js/seo-locales.js"></script>
+
   </head>
   <body>
     <a class="skip" href="#main">До змісту</a>
@@ -342,7 +342,7 @@
             <div class="countdown-units" role="timer" aria-label="Час до початку зустрічі">
               <span><b data-clock="days">00</b><small>днів</small></span><span><b data-clock="hours">00</b><small>годин</small></span><span><b data-clock="minutes">00</b><small>хвилин</small></span><span><b data-clock="seconds">00</b><small>секунд</small></span>
             </div>
-            <p class="countdown-ended">Запланований час настав. Уточніть статус зустрічі в організатора.</p>
+            <p class="countdown-ended" hidden>Запланований час настав. Уточніть статус зустрічі в організатора.</p>
           </div>
         </div>
         <div class="event-layout">
@@ -1432,8 +1432,8 @@
               <option value="question">Інше питання</option>
               <option value="privacy">Питання про мої дані</option>
             </select></label><label for="field-7">Спосіб зв’язку *<select id="field-7" name="method">
-              <option>Telegram</option>
-              <option>Телефон</option>
+              <option value="telegram">Telegram</option>
+              <option value="phone">Телефон</option>
             </select></label><label for="field-8" class="full">Telegram або телефон *<input id="field-8" name="contact" required maxlength="100" placeholder="Телефон або Telegram (без @ теж можна)" autocomplete="off"></label><label for="field-9" class="full">Email — додатково<input id="field-9" name="email" type="email" autocomplete="email" maxlength="120" placeholder="name@example.com"></label><label for="field-10" class="full">Зустріч / напрямок<input id="field-10" name="context" maxlength="120"></label>
           <details class="full request-options">
             <summary>Додати подробиці за бажанням</summary>
@@ -1474,9 +1474,6 @@
       </div>
     </dialog>
     <noscript><p class="container">Для форм і голосування увімкніть JavaScript. Написати організатору: <a href="https://t.me/panda_dp">Telegram організатора</a>.</p></noscript>
-    <script defer="defer" src="js/app.js"></script>
-    <script src="js/language-switch.js" defer="defer"></script>
-    <script src="js/details-refinement.js" defer="defer"></script>
-    <script defer src="js/venue-gallery.js"></script>
+    <script defer src="js/app.js"></script>
   </body>
 </html>
