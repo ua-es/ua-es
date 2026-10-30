@@ -1,0 +1,18 @@
+# Operating system files
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+Desktop.ini
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+.#*
+
+# Local editor logs
+.vscode/*.log
+
+# JetBrains IDE settings
+.idea/

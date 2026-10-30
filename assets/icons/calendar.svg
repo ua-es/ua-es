@@ -1,1 +1,1 @@
-<svg fill="none" stroke="#154ba8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect height="22" rx="3" width="24" x="4" y="7"/><path d="m10 3v8m12-8v8m-18 4h24m-18 5h2m5 0h2m-9 5h2m5 0h2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="#154ba8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><title>Дата</title><rect x="4" y="7" width="24" height="22" rx="3"/><path d="M10 3v8M22 3v8M4 15h24M10 20h2M17 20h2M10 25h2M17 25h2"/></svg>
