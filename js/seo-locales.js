@@ -1,0 +1,1 @@
+(()=>{if(!/^https?:$/.test(location.protocol))return;const t=new URL("./",document.baseURI);for(const[n,o]of[["uk","./"],["es","es/"],["en","en/"],["x-default","./"]]){const e=document.createElement("link");e.rel="alternate",e.hreflang=n,e.href=new URL(o,t).href,document.head.append(e)}})();

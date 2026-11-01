@@ -1,7 +1,0 @@
-{
-  "missing_static_references": [],
-  "corrupt_images": [],
-  "minified_svgs": 3,
-  "bytes_saved": 11,
-  "scope": "HTML/CSS static references; dynamic JS covered separately by UI tests"
-}
