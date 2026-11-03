@@ -286,7 +286,7 @@ import { initializeContactForm } from "./contact-form.js";
     ]);
   const galleryPhotos = [
     {
-      src: "assets/archive-forest.webp",
+      src: "images/archive-forest.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-forest.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -294,7 +294,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.archive-forest.caption"),
     },
     {
-      src: "assets/archive-beach.webp",
+      src: "images/archive-beach.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-beach.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -302,7 +302,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.archive-beach.caption"),
     },
     {
-      src: "assets/IMG_8336.webp",
+      src: "images/IMG_8336.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.img-8336.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -310,7 +310,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.img-8336.caption"),
     },
     {
-      src: "assets/archive-big.webp",
+      src: "images/archive-big.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-big.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -318,7 +318,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.archive-big.caption"),
     },
     {
-      src: "assets/archive-tents.webp",
+      src: "images/archive-tents.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-tents.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -326,7 +326,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.archive-tents.caption"),
     },
     {
-      src: "assets/IMG_4325.webp",
+      src: "images/IMG_4325.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.img-4325.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -334,7 +334,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.img-4325.caption"),
     },
     {
-      src: "assets/archive-family.webp",
+      src: "images/archive-family.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-family.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -342,7 +342,7 @@ import { initializeContactForm } from "./contact-form.js";
       caption: window.i18n.t("gallery.photo.archive-family.caption"),
     },
     {
-      src: "assets/archive-autumn.webp",
+      src: "images/archive-autumn.webp",
       position: "center",
       alt: window.i18n.t("gallery.photo.archive-autumn.alt"),
       type: "REAL_EVENT_PHOTO",
@@ -375,7 +375,7 @@ import { initializeContactForm } from "./contact-form.js";
       const photoNumber = String(index + 1).padStart(2, "0");
 
       return {
-        src: `assets/community/meeting-${photoNumber}.webp`,
+        src: `images/community/meeting-${photoNumber}.webp`,
         alt: caption,
         caption,
       };
@@ -538,7 +538,7 @@ import { initializeContactForm } from "./contact-form.js";
       piece.inert = region !== "spain" && !piece.classList.contains(`piece-${region}`);
     });
     querySelector("#map-scenery").src =
-      `assets/v6-map-background-${region === "portugal" ? "spain" : region}.webp`;
+      `images/v6-map-background-${region === "portugal" ? "spain" : region}.webp`;
     querySelector("#layered-map").classList.toggle("zoomed", region === "andalucia");
     querySelector("#layered-map").scrollLeft = 0;
     querySelector("#map-title").textContent = window.i18n.t(`city.map.title.${region}`);
@@ -575,7 +575,7 @@ import { initializeContactForm } from "./contact-form.js";
     querySelector("#city-content").innerHTML = `
       <div class="city-modal-cover">
         <img class="city-hero" src="${getCityImage(cityId)}" alt="${escapeHtml(city.name)}" width="720" height="480">
-        <img class="popup-art" src="assets/v6-${decoration}.webp" alt="" width="160" height="160">
+        <img class="popup-art" src="images/v6-${decoration}.webp" alt="" width="160" height="160">
       </div>
       <div class="detail-copy">
         <p class="eyebrow">${window.i18n.t(city.isPast ? "city.dialog.pastLabel" : "city.dialog.newLabel")}</p>
@@ -623,8 +623,8 @@ import { initializeContactForm } from "./contact-form.js";
     querySelector("#detail-modal").dataset.layout = details.layout || "cover";
     querySelector("#detail-content").innerHTML = `
       <div class="detail-cover">
-        <img src="assets/${details.image}.webp" width="900" height="600" alt="">
-        <img class="popup-art" src="assets/${details.art}.webp" width="180" height="180" alt="">
+        <img src="images/${details.image}.webp" width="900" height="600" alt="">
+        <img class="popup-art" src="images/${details.art}.webp" width="180" height="180" alt="">
       </div>
       <div class="detail-copy">
         <p class="eyebrow">${window.i18n.t("information.detailsEyebrow")}</p>
@@ -646,7 +646,7 @@ import { initializeContactForm } from "./contact-form.js";
     querySelector("#detail-modal").dataset.tone = "food";
     querySelector("#detail-modal").dataset.layout = "food";
     querySelector("#detail-content").innerHTML =
-      `<div class="detail-food"><img src="${getDishImage(dish.asset)}" width="640" height="480" alt="${escapeHtml(name)}"><img class="food-back" src="${getDishImage(dish.asset, "ingredients")}" alt="" width="320" height="240"><img class="popup-art" src="assets/v6b-${decoration}.webp" width="140" height="140" alt=""></div><div class="detail-copy"><p class="eyebrow">${window.i18n.t(dish.cat === "base" ? "dish.menu.mainLabel" : "dish.menu.optionalLabel")}</p><h2 id="detail-title">${escapeHtml(name)}</h2><p class="dish-description">${escapeHtml(description)}</p><div class="dish-detail-section"><h3>${window.i18n.t("dish.preparationHeading")}</h3><p>${escapeHtml(preparation)}</p></div><div class="dish-detail-section"><h3>${window.i18n.t("dish.arrangementsHeading")}</h3><p>${escapeHtml(wishes)}</p></div><p>${window.i18n.t(dish.cat === "base" ? "dish.mainMenuNote" : "dish.optionalMenuNote")}</p><p><strong>${window.i18n.t("dish.dietaryQuestion")}</strong> ${window.i18n.t("dish.dietaryInstructions")}</p><button class="button" data-contact="menu" data-context="${escapeHtml(window.i18n.t("dish.contactContext", { dish: name }))}">${window.i18n.t("dish.contactAction")} </button></div>`;
+      `<div class="detail-food"><img src="${getDishImage(dish.asset)}" width="640" height="480" alt="${escapeHtml(name)}"><img class="food-back" src="${getDishImage(dish.asset, "ingredients")}" alt="" width="320" height="240"><img class="popup-art" src="images/v6b-${decoration}.webp" width="140" height="140" alt=""></div><div class="detail-copy"><p class="eyebrow">${window.i18n.t(dish.cat === "base" ? "dish.menu.mainLabel" : "dish.menu.optionalLabel")}</p><h2 id="detail-title">${escapeHtml(name)}</h2><p class="dish-description">${escapeHtml(description)}</p><div class="dish-detail-section"><h3>${window.i18n.t("dish.preparationHeading")}</h3><p>${escapeHtml(preparation)}</p></div><div class="dish-detail-section"><h3>${window.i18n.t("dish.arrangementsHeading")}</h3><p>${escapeHtml(wishes)}</p></div><p>${window.i18n.t(dish.cat === "base" ? "dish.mainMenuNote" : "dish.optionalMenuNote")}</p><p><strong>${window.i18n.t("dish.dietaryQuestion")}</strong> ${window.i18n.t("dish.dietaryInstructions")}</p><button class="button" data-contact="menu" data-context="${escapeHtml(window.i18n.t("dish.contactContext", { dish: name }))}">${window.i18n.t("dish.contactAction")} </button></div>`;
     showDialog(querySelector("#detail-modal"));
   }
   document.addEventListener("click", (event) => {

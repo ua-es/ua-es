@@ -3,12 +3,6 @@
 
   function handleImageError(image) {
     if (!(image instanceof HTMLImageElement) || !image.getAttribute("src")) return;
-    const pictureSource =
-      image.parentElement?.tagName === "PICTURE" && image.parentElement.querySelector("source");
-    if (pictureSource) {
-      pictureSource.remove();
-      return;
-    }
     if (!handledImages.has(image)) {
       handledImages.add(image);
       const imageUrl = new URL(image.currentSrc || image.src, location.href);

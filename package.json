@@ -1,7 +1,7 @@
 {
   "name": "picnuc.ua.es",
   "version": "1.0.0",
-  "description": "",
+  "description": "Сайт спільноти «Тепла зустріч» — зустрічі українців та друзів в Іспанії",
   "type": "module",
   "scripts": {
     "build": "node build.js",
@@ -9,15 +9,15 @@
     "test": "npm run test:unit && playwright test",
     "test:unit": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
-    "format": "prettier --write build.js src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml"
+    "format": "prettier --write build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ua-es/ua-es.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Тепла зустріч",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/ua-es/ua-es/issues"
   },
@@ -29,5 +29,6 @@
   },
   "allowScripts": {
     "esbuild@0.28.2": true
-  }
+  },
+  "private": true
 }

@@ -1,0 +1,59 @@
+Copyright (c) 2026 Тепла зустріч. All rights reserved.
+Усі права захищено.
+
+SOURCE-AVAILABLE, VIEW-ONLY LICENSE / ЛІЦЕНЗІЯ «ЛИШЕ ПЕРЕГЛЯД»
+
+1. What you may do / Що дозволено
+   You may view and read the source code, documentation and other materials
+   in this repository, including on GitHub, and may use the live website as
+   intended. GitHub's Terms of Service additionally allow viewing and forking
+   public repositories within the GitHub platform.
+
+   Дозволено переглядати й читати код, документацію та інші матеріали
+   репозиторію, зокрема на GitHub, і користуватися сайтом за призначенням.
+
+2. What requires written permission / Що потребує письмової згоди
+   Without prior written permission from the copyright holder you may NOT
+   copy, reproduce, modify, adapt, translate, merge, publish, distribute,
+   sublicense, sell, host, deploy, or otherwise use any part of this
+   repository (code, text, translations, design, layout, logos, patterns,
+   icons, illustrations or any other material), in whole or in part, for any
+   purpose, including commercial and non-commercial use.
+
+   Без попередньої письмової згоди правовласника заборонено копіювати,
+   відтворювати, змінювати, адаптувати, перекладати, публікувати,
+   поширювати, продавати, розміщувати на власних ресурсах або будь-яким
+   іншим чином використовувати будь-яку частину репозиторію (код, тексти,
+   переклади, дизайн, верстку, логотипи, візерунки, іконки, ілюстрації),
+   повністю чи частково, з будь-якою метою.
+
+3. Photographs and people / Фотографії
+   All photographs, videos and images of events and participants are the
+   exclusive property of their respective authors and of the copyright
+   holder. All rights reserved. They may not be downloaded, reused, or
+   redistributed in any form without explicit written consent.
+
+   Усі фотографії, відео та зображення зустрічей і учасників є
+   виключною власністю їхніх авторів і правовласника. Усі права захищено.
+   Їх заборонено завантажувати, повторно використовувати чи поширювати
+   без прямої письмової згоди.
+
+4. Third-party components / Сторонні компоненти
+   Third-party software and fonts (for example Playwright, esbuild, Prettier
+   and the web fonts used by the site) remain under their own licenses, which
+   this notice does not change. See docs/third-party.md.
+
+   Сторонні програмні компоненти та шрифти залишаються під власними
+   ліцензіями; ця ліцензія їх не змінює (див. docs/third-party.md).
+
+5. No warranty / Без гарантій
+   THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED. THE COPYRIGHT HOLDER IS NOT LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY ARISING FROM THEIR USE.
+
+6. Permission requests / Запит на дозвіл
+   To ask for permission, contact the maintainers via the contact form on
+   the website: https://ua-es.github.io/ua-es/
+
+   Щоб запросити дозвіл, напишіть організаторам через форму на сайті:
+   https://ua-es.github.io/ua-es/

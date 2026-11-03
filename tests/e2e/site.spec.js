@@ -575,10 +575,6 @@ for (const language of languages) {
       )
       .toBe(true);
     await page.locator("#large-photo").evaluate((image) => {
-      image
-        .closest("picture")
-        .querySelectorAll("source")
-        .forEach((source) => source.remove());
       image.src = "/gallery-image-error-for-translation-test.webp";
     });
     await expect(page.locator("#photo-status")).toHaveText(language.galleryError);

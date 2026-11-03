@@ -1,0 +1,732 @@
+/* Частина 09: Мова, тема, темний режим, шапка, підвал, юридичні блоки.
+   Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
+
+.language-switch {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.language-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 44px;
+  padding: 4px;
+  color: inherit;
+  text-decoration: none;
+  font: 700 12px/1.2 system-ui;
+  letter-spacing: 0.06em;
+}
+.language-switch a[aria-current="page"] {
+  background: #143a63;
+  color: #fff;
+  border-radius: 6px;
+}
+.language-switch a:hover,
+.language-switch a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.header-controls {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+header {
+  flex-wrap: wrap;
+}
+.brand-wordmark small {
+  white-space: normal;
+  text-align: center;
+}
+html[lang="en"] .brand-wordmark small,
+html[lang="es"] .brand-wordmark small {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+@media (max-width: 600px) {
+  .header-controls {
+    gap: 3px;
+  }
+  .language-switch a {
+    min-width: 29px;
+  }
+  .brand-wordmark {
+    max-width: 150px;
+  }
+  header {
+    gap: 8px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .language-switch a[aria-current="page"] {
+    outline: 1px solid #85acd8;
+  }
+}
+#organization .equipment-marquee {
+  overflow: visible;
+  padding: 18px 0 24px;
+}
+#organization .equipment-group {
+  min-width: 0;
+  padding: 0;
+  width: 100%;
+}
+#organization .equipment-group .kit-scroll-item {
+  height: clamp(42px, 10vw, 125px);
+  margin-inline: -0.35vw;
+}
+#organization .equipment-group :is(.kit-canopy, .kit-tarp) {
+  height: clamp(58px, 12vw, 155px);
+}
+#organization .equipment-group :is(.kit-furniture, .kit-kids) {
+  height: clamp(40px, 9vw, 115px);
+}
+#organization .equipment-group :is(.kit-ice, .kit-tableware, .kit-tablecloths) {
+  height: clamp(25px, 5.5vw, 70px);
+}
+#organization .equipment-group :is(.kit-guitar, .kit-balloons) {
+  height: clamp(50px, 11vw, 145px);
+}
+#organization .equipment-group :is(.kit-cooler, .kit-kitchen) {
+  height: clamp(32px, 7vw, 90px);
+}
+dialog {
+  box-sizing: border-box;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+dialog input,
+dialog select,
+dialog textarea {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+dialog button,
+.button {
+  overflow-wrap: anywhere;
+}
+.language-switch a:focus-visible {
+  outline: 3px solid #ba4a00;
+  outline-offset: 3px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap;
+  min-height: 88px;
+}
+header .brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  width: auto;
+}
+header .brand-lockup {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  gap: 3px;
+}
+header .brand-logo {
+  display: block;
+  width: 100%;
+  height: 45px;
+}
+header .brand-lockup small {
+  font:
+    600 12px/1.4 system-ui,
+    sans-serif;
+  letter-spacing: 0.15em;
+  text-align: center;
+  white-space: nowrap;
+}
+header .brand-flags {
+  position: static;
+  display: block;
+  width: 78px;
+  height: 44px;
+  object-fit: contain;
+  transform: none;
+  margin: 0;
+}
+header #navigation {
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 0;
+}
+header #navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  white-space: nowrap;
+}
+header .header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: nowrap;
+}
+header #theme-choice {
+  display: none !important;
+}
+.theme-toggle,
+#language-choice {
+  height: 42px;
+  min-width: 44px;
+  border: 1px solid currentColor;
+  border-radius: 24px;
+  background: transparent;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.theme-toggle svg {
+  display: block;
+}
+.theme-toggle[aria-pressed="true"] {
+  background: #ffd168;
+  color: #153a6d;
+}
+#language-choice {
+  font: 700 12px system-ui;
+  letter-spacing: 0.06em;
+  padding: 0 9px;
+  width: 62px;
+}
+#language-choice option {
+  color: #153a6d;
+  background: #fffaf0;
+}
+.theme-toggle:hover,
+#language-choice:hover {
+  background: #ffd168;
+  color: #153a6d;
+}
+.theme-toggle:focus-visible,
+#language-choice:focus-visible {
+  outline: 3px solid #d65a13;
+  outline-offset: 3px;
+}
+#organization .section-heading {
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+}
+#organization .section-heading .heading-art {
+  grid-column: 1/5;
+  grid-row: 1;
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 230px;
+  object-fit: contain;
+  transform: none;
+  margin: 0;
+}
+#organization .section-heading > .heading-copy {
+  grid-column: 7/-1;
+  grid-row: 1;
+  min-width: 0;
+}
+@media (max-width: 1100px) {
+  header {
+    gap: 12px;
+  }
+  header .brand-lockup {
+    width: 160px;
+  }
+  header .brand-flags {
+    width: 50px;
+  }
+  header .brand {
+    gap: 8px;
+  }
+  header #navigation {
+    gap: 12px;
+  }
+  header .brand-lockup small {
+    font-size: 12px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  header .brand-lockup {
+    width: 135px;
+  }
+  header .brand-logo {
+    height: 34px;
+  }
+  header .brand-flags {
+    width: 38px;
+    height: 32px;
+  }
+  header .header-controls {
+    gap: 5px;
+  }
+  header #navigation {
+    width: 100%;
+    order: 3;
+  }
+  header .brand-lockup small {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  .theme-toggle,
+  #language-choice {
+    height: 40px;
+    min-width: 38px;
+  }
+  #language-choice {
+    width: 54px;
+  }
+  #organization .section-heading .heading-art {
+    grid-column: 1/6;
+    max-height: 140px;
+  }
+  #organization .section-heading > .heading-copy {
+    grid-column: 7/-1;
+  }
+  #organization .section-heading h2 {
+    font-size: clamp(26px, 6vw, 42px);
+  }
+}
+@media (max-width: 380px) {
+  header .brand-flags {
+    width: 28px;
+  }
+  header .brand-lockup {
+    width: 115px;
+  }
+  header .brand-lockup small {
+    font-size: 12px;
+  }
+}
+#organization .equipment-marquee {
+  width: calc(100vw - 32px);
+  max-width: none;
+  margin-left: calc((100% - 100vw) / 2 + 16px);
+  padding: 20px 0;
+  overflow: visible;
+}
+#organization .equipment-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+}
+#organization .equipment-group .kit-scroll-item {
+  flex: 1 1 0;
+  object-position: center bottom;
+  margin: 0 !important;
+  transform: none !important;
+  align-self: flex-end;
+}
+#organization .equipment-group :is(.kit-canopy, .kit-tarp) {
+  flex-grow: 1.7;
+}
+#organization .equipment-group :is(.kit-ice, .kit-tableware) {
+  flex-grow: 0.65;
+}
+.invitation.orange {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 60px;
+}
+.invitation.orange .container {
+  position: relative;
+  z-index: 2;
+}
+.invitation.orange .ribbon-fruit {
+  display: block !important;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 390px;
+  max-width: 70vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+#event {
+  position: relative;
+}
+.event-edge-art {
+  position: absolute;
+  left: calc((100% - 100vw) / 2 - 110px);
+  top: -110px;
+  width: 320px;
+  pointer-events: none;
+  z-index: 0;
+}
+#event > .section-heading {
+  position: relative;
+  z-index: 1;
+}
+#menu .menu-grid {
+  gap: 16px;
+}
+#menu .menu-card {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  transform: none !important;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  min-height: 0;
+}
+#menu .menu-card:before,
+#menu .menu-card:after {
+  display: none !important;
+}
+#menu .menu-card .dish-copy {
+  background: transparent !important;
+  border-radius: 0 !important;
+  color: inherit !important;
+  padding: 14px 8px;
+  flex: 0 0 auto;
+}
+#menu .menu-card:hover .dish-copy,
+#menu .menu-card:focus-within .dish-copy {
+  background: transparent !important;
+  color: inherit !important;
+}
+#menu .menu-card:is(:hover, :focus-within) .dish-copy h3,
+#menu .dish-title:hover {
+  color: #b84b0b !important;
+}
+#menu .menu-card .dish-copy p {
+  color: var(--muted, #4d6172) !important;
+}
+#menu .dish-scene {
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+#menu .dish-copy h3 {
+  font-size: clamp(20px, 2.1vw, 30px);
+  margin: 0 0 8px;
+}
+#menu .menu-card .dish-open {
+  display: none;
+}
+#extras .extras-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 0;
+  width: 100vw;
+  margin-left: calc((100% - 100vw) / 2);
+  align-items: stretch;
+  padding: 0;
+}
+#extras .extras-layout > .extra-grid {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 0 12px;
+  scroll-padding: 12px;
+  gap: 8px;
+}
+#extras .extras-layout > .menu-wishes {
+  position: relative;
+  inset: auto;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  aspect-ratio: auto;
+  border-radius: 8px 0 0 8px;
+  box-shadow: none;
+  z-index: 3;
+  align-self: stretch;
+}
+#extras .menu-card {
+  flex: 0 0 170px;
+}
+#geography #city-scroller .city-card {
+  flex: 0 0 190px;
+  width: 190px;
+  min-width: 190px;
+  max-width: 190px;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  color: inherit;
+  padding: 14px 8px;
+}
+#geography .city-card strong {
+  order: 2;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  white-space: normal;
+  font-size: 17px;
+}
+#geography .city-card .map-city-preview {
+  order: 1;
+  object-fit: contain;
+}
+#geography .city-card .city-status-dot {
+  order: 3;
+  position: static !important;
+  display: block;
+  width: 34px;
+  height: 4px;
+  border: 0;
+  border-radius: 3px;
+  margin: 0 auto;
+  background: #267346;
+}
+#geography .city-card.planned .city-status-dot {
+  background: #b45509;
+}
+#geography .city-card:hover strong {
+  color: #b45509;
+}
+#geography .city-card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+#photo-caption {
+  max-width: 760px;
+  margin: auto;
+  padding: 18px 24px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.photo-story {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  padding: 0 24px;
+  line-height: 1.7;
+}
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+footer .footer-grid > div {
+  min-width: 0;
+}
+footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+footer .brand-lockup {
+  display: block;
+  width: 180px;
+}
+footer .brand-logo {
+  width: 100%;
+  height: 45px;
+  display: block;
+}
+footer .brand-lockup small {
+  display: block;
+  font: 600 12px/1.5 system-ui;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+footer .brand-flags {
+  position: static;
+  width: 64px;
+  height: 40px;
+  margin: 0;
+  transform: none;
+}
+footer .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: 28px;
+  border-top: 1px solid #ffffff30;
+}
+.legal-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.legal-links button {
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 8px 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+.legal-dialog {
+  width: min(720px, calc(100vw - 24px));
+  padding: 32px;
+  border: 0;
+  border-radius: 18px;
+  color: #153a6d;
+  background: #fffaf0;
+}
+.legal-dialog::backdrop,
+#mobile-navigation::backdrop {
+  background: #102d4b99;
+  backdrop-filter: blur(5px);
+}
+.legal-dialog p {
+  line-height: 1.75;
+}
+.cookie-note {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 30;
+  max-width: 390px;
+  background: #fffaf0;
+  color: #153a6d;
+  padding: 18px;
+  box-shadow: 0 5px 35px #0002;
+  border: 1px solid #c9d2d9;
+  border-radius: 14px;
+  font-size: 13px;
+}
+.cookie-note[hidden] {
+  display: none;
+}
+.cookie-note button {
+  margin: 8px 10px 0 0;
+  border: 0;
+  border-bottom: 1px solid;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+#mobile-navigation {
+  padding: 28px;
+  width: min(400px, calc(100vw - 24px));
+  border: 0;
+  border-radius: 20px;
+  background: #fffaf0;
+  color: #153a6d;
+}
+#mobile-navigation nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+}
+#mobile-navigation nav a {
+  padding: 14px;
+  font-size: 21px;
+  color: inherit;
+  text-decoration: none;
+}
+.mobile-nav-close {
+  float: right;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  header #navigation {
+    display: none !important;
+  }
+  header .menu-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  footer .footer-grid > div:first-child {
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 901px) {
+  header .menu-button {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  #extras .extras-layout {
+    grid-template-columns: minmax(0, 1fr) 136px;
+  }
+  #extras .extras-layout > .menu-wishes {
+    min-height: 280px;
+  }
+  #extras .menu-card {
+    flex-basis: 145px;
+  }
+  .event-edge-art {
+    width: 220px;
+    left: -130px;
+    top: -70px;
+  }
+  #geography #city-scroller .city-card {
+    flex-basis: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    width: 160px;
+  }
+  .cookie-note {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+  #menu .menu-grid {
+    gap: 8px;
+  }
+  #menu .dish-copy h3 {
+    font-size: 20px;
+  }
+  .footer-bottom {
+    font-size: 13px;
+  }
+}

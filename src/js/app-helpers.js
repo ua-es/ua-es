@@ -30,9 +30,9 @@
   };
 
   function getCityImage(cityId) {
-    if (portugalCities.has(cityId)) return `assets/v7-${cityId}.webp`;
+    if (portugalCities.has(cityId)) return `images/v7-${cityId}.webp`;
     if (spanishCityImages.has(cityId)) return `assets/city-marks/${cityId}.svg`;
-    return `assets/v6c-city-${cityId}.webp`;
+    return `images/v6c-city-${cityId}.webp`;
   }
 
   function getCityPreview(cityId) {
@@ -92,7 +92,7 @@
       );
     },
     getDishImage(assetId, imageType = "plate") {
-      return `assets/${coreDishAssets.has(assetId) ? "v6" : "v6b"}-${imageType}-${assetId}.webp`;
+      return `images/${coreDishAssets.has(assetId) ? "v6" : "v6b"}-${imageType}-${assetId}.webp`;
     },
     getCityImage,
     getCityPreview,
