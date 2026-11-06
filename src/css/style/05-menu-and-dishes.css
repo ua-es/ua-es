@@ -1,6 +1,5 @@
 /* Частина 05: Запрошення, меню, страви, галереї, ілюстровані варіанти, деталі.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 [data-theme="night"] .invitation.blue {
   background: #16468a;
 }
@@ -151,13 +150,11 @@
   }
   .layered-map {
     min-height: 0;
-    overflow-x: auto;
   }
   .map-coordinate-layer {
     min-width: 600px;
   }
   .layered-map #map-canvas {
-    width: 600px;
     margin: 0;
   }
   .map-pin {
@@ -175,7 +172,6 @@
     width: 100%;
   }
   .city-card {
-    flex-basis: 190px;
     padding: 19px;
   }
   .new-directions {
@@ -184,20 +180,8 @@
   .city-scroll-controls p {
     font-size: 13px;
   }
-  .detail-copy {
-    padding: 30px 23px;
-  }
-  .detail-copy h2 {
-    font-size: 37px;
-  }
   .detail-copy .eyebrow {
     padding-right: 65px;
-  }
-  .popup-art {
-    width: 110px;
-    height: 130px;
-    right: 15px;
-    bottom: -20px;
   }
   .detail-cover,
   .city-modal-cover {
@@ -208,9 +192,6 @@
   }
   .detail-food .popup-art {
     width: 80px;
-  }
-  .detail-copy > p {
-    font-size: 15px;
   }
   .drinks-ice {
     right: -60px;
@@ -515,9 +496,6 @@
   box-shadow: 0 8px 20px #112b5026;
   transform: translateY(-4px);
 }
-.city-card:is(:hover, :focus-visible) .city-status {
-  color: #fffefa;
-}
 .gallery-grid button:is(:hover, :focus-visible) {
   background: #174788;
   color: #fffefa;
@@ -640,9 +618,6 @@
 .pattern-citrus {
   background-image: url(../assets/patterns/citrus-vine.svg);
 }
-.pattern-azulejo {
-  background-image: url(../assets/patterns/azulejo.svg);
-}
 [data-theme="night"] .pattern-divider {
   background-color: #fffaf0;
 }
@@ -716,17 +691,11 @@
   width: 20%;
 }
 .map-coordinate-layer .map-pin {
-  transform: translate(-50%, -50%);
-  min-height: 32px;
   font-size: 12px;
-  padding: 4px;
   gap: 4px;
 }
 .map-coordinate-layer .map-pin span {
-  white-space: nowrap;
-  max-width: 180px;
   text-align: center;
-  font-size: inherit;
 }
 .map-city-preview {
   position: absolute !important;
@@ -812,15 +781,10 @@
     min-height: 0;
   }
   #detail-modal[data-layout="split"] .popup-art {
-    right: 12px;
     bottom: -22px;
-    width: 100px;
   }
   #detail-modal[data-layout="poster"] .detail-cover {
     height: 240px;
-  }
-  .city-modal-cover {
-    height: 260px;
   }
   .extra-grid .menu-card {
     flex-basis: 165px;
@@ -855,9 +819,7 @@
   width: 100% !important;
   height: 92px !important;
   opacity: 1;
-  visibility: visible;
   transform: none;
-  display: none;
 }
 .city-card:is(:hover, :focus-visible) .map-city-preview[src] {
   display: block;
@@ -880,9 +842,6 @@
 }
 .city-card:not(:hover):not(:focus-visible) .map-city-preview[src] {
   opacity: 0.85;
-}
-.map-art {
-  overflow: hidden;
 }
 .layered-map {
   padding-top: 85px;
@@ -1073,11 +1032,7 @@
   margin-top: 18px !important;
 }
 #format .heading-art {
-  height: auto;
-  max-height: 610px;
   width: 100%;
-  object-fit: contain;
-  transform: none;
 }
 #format .illustrated-heading {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 40%);
@@ -1134,13 +1089,9 @@
 }
 .equipment-group {
   display: flex;
-  align-items: center;
   flex-shrink: 0;
-  gap: 30px;
-  padding-right: 30px;
 }
 .equipment-group .kit-scroll-item {
-  position: static;
   width: 190px;
   height: 165px;
   object-fit: contain;

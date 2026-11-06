@@ -1,6 +1,5 @@
 /* Частина 04: Карти, регіони, міста, спливаючі підказки.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 .geography {
   position: relative;
   margin: 45px 0 65px;
@@ -20,7 +19,6 @@
 .map-switch {
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
 }
 .map-switch button {
   border: 1px solid var(--line);
@@ -41,22 +39,11 @@
   isolation: isolate;
   margin-top: 20px;
   min-height: 330px;
-  overflow: hidden;
 }
 #map-scenery {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  object-fit: contain;
   z-index: -1;
-  opacity: 0.6;
-  pointer-events: none;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 38%, transparent 74%);
-  mask-image: radial-gradient(ellipse at center, #000 38%, transparent 74%);
-  transition:
-    opacity 0.6s,
-    transform 0.6s;
 }
 .zoomed #map-scenery {
   opacity: 0.48;
@@ -68,14 +55,7 @@
   margin: 0 auto;
 }
 .map-coordinate-layer {
-  position: relative;
   animation: map-appear 0.65s ease both;
-}
-.map-art {
-  width: 100%;
-  height: 100%;
-  display: block;
-  overflow: visible;
 }
 .map-pin {
   position: absolute;
@@ -236,7 +216,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
   text-align: left;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -339,7 +318,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 20px;
 }
 .popup-art {
   position: absolute;
@@ -365,10 +343,6 @@
 }
 .detail-copy .button {
   margin-top: 15px;
-}
-.detail-copy .eyebrow {
-  padding-right: 120px;
-  font-size: 12px;
 }
 .detail-food {
   height: 290px;
@@ -433,9 +407,6 @@
 }
 .dish-scene .plate {
   transition: transform 0.4s;
-}
-.menu-card.revealed .plate {
-  animation: opening-in 0.7s both 0.35s;
 }
 .menu-card.revealed .ingredient {
   animation-delay: 0.05s !important;

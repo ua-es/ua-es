@@ -1,6 +1,5 @@
 /* Частина 02: Секції сторінки (hero, формат, меню, FAQ, футер), діалоги, форми, рух.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 .hero {
   position: relative;
   min-height: 670px;
@@ -86,7 +85,6 @@
 }
 .format-oranges {
   width: 210px;
-  right: -145px;
   top: -20px;
   transform: rotate(18deg);
 }
@@ -116,7 +114,6 @@
   border: 1px solid #173f79;
   font-family: Comforter, cursive;
   font-size: 30px;
-  transform: rotate(-4deg);
 }
 .equipment-strip {
   display: grid;
@@ -315,12 +312,6 @@ dd {
   z-index: 2;
   filter: drop-shadow(0 12px 8px #142c4e10);
 }
-.has-ingredients .plate {
-  width: 78%;
-  height: 75%;
-  left: 11%;
-  bottom: -1%;
-}
 .ingredient {
   position: absolute;
   width: 28%;
@@ -389,13 +380,7 @@ dd {
   margin-top: 15px;
 }
 .extra-grid {
-  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
-}
-.extra-grid .dish-scene {
-  height: 200px;
-  aspect-ratio: auto;
 }
 .extra-grid .plate {
   height: 100%;
@@ -463,13 +448,10 @@ dd {
 }
 .cooperation-grid .button {
   margin-top: auto;
-  width: 100%;
   font-size: 13px;
-  padding: 12px;
 }
 .cooperation-balcony {
   width: 200px;
-  right: -170px;
   bottom: 15px;
   opacity: 0.75;
 }
@@ -612,9 +594,6 @@ dd {
   font-size: 24px;
   font-weight: 400;
 }
-.faq-list details[open] summary > span {
-  transform: rotate(45deg);
-}
 .faq-list details p {
   margin-top: 16px;
   font-size: 15px;
@@ -622,8 +601,6 @@ dd {
 }
 .final-cta {
   position: relative;
-  padding-block: 75px 110px;
-  min-height: 500px;
 }
 .final-cta h2 {
   max-width: 650px;
@@ -643,7 +620,6 @@ dd {
   isolation: isolate;
 }
 footer {
-  padding: 45px 0 25px;
   border-top: 1px solid var(--line);
   background: var(--surface);
 }
@@ -680,8 +656,6 @@ footer {
   margin-top: 18px;
 }
 .social-links a {
-  width: 36px;
-  height: 36px;
   color: var(--blue);
   display: grid;
   place-items: center;
@@ -733,11 +707,7 @@ input[type="checkbox"] {
 dialog {
   position: fixed;
   width: min(760px, calc(100vw - 24px));
-  max-width: calc(100vw - 24px);
   max-height: calc(100vh - 24px);
-  max-height: calc(100dvh - 24px);
-  overflow: auto;
-  overscroll-behavior: contain;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--paper);
@@ -830,11 +800,8 @@ dialog::backdrop {
 }
 #large-photo {
   max-height: 70vh;
-  width: 100%;
-  object-fit: contain;
 }
 #photo-caption {
-  font-size: 14px;
   padding-top: 12px;
 }
 .photo-controls {

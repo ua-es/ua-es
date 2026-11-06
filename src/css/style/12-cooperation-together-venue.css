@@ -1,6 +1,5 @@
 /* Частина 12: Співпраця, «разом», майданчик, фінальні адаптивні правки.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 footer .media-credit {
   color: inherit;
   text-decoration: none;
@@ -64,11 +63,7 @@ footer :is(a, button):is(:hover, :focus-visible) {
     transform: rotate(-22deg) !important;
     pointer-events: none;
   }
-  #meeting-types .meeting-photo {
-    aspect-ratio: 4/3;
-  }
   #meeting-types .meeting-flowers {
-    left: -45px;
     top: -75px;
     width: 140px;
     height: 220px;
@@ -321,11 +316,7 @@ footer :is(a, button):is(:hover, :focus-visible) {
   }
 }
 #bring.section.container {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: none;
   margin-inline: 0;
-  border-radius: 0;
 }
 .welcome-title {
   font: inherit;
@@ -426,23 +417,14 @@ footer :is(a, button):is(:hover, :focus-visible) {
   .heading-art {
   display: block !important;
   position: absolute;
-  left: 66%;
   right: auto;
-  top: 0;
   width: 48%;
   max-width: none;
-  height: 100%;
-  max-height: 380px;
-  object-fit: contain;
-  object-position: left center;
   pointer-events: none;
   z-index: 1;
   transform: none !important;
 }
 @media (max-width: 760px) {
-  :is(#cooperation, #feedback, #future, #history, #faq, #menu, #extras) .illustrated-heading {
-    min-height: 230px;
-  }
   :is(#cooperation, #feedback, #future, #history, #faq, #menu, #extras) .heading-copy h2 {
     font-size: clamp(28px, 5vw, 40px);
   }
@@ -460,14 +442,6 @@ footer :is(a, button):is(:hover, :focus-visible) {
   pointer-events: none;
 }
 @media (max-width: 760px) {
-  #cooperation .edge-branch {
-    left: 70%;
-    width: 45%;
-  }
-  #cooperation .illustrated-heading .heading-art {
-    max-height: 240px;
-    top: 150px;
-  }
 }
 :is(#cooperation, #feedback, #future, #history, #faq, #menu, #extras) .illustrated-heading {
   min-height: clamp(320px, 34vw, 480px);
@@ -484,17 +458,9 @@ footer :is(a, button):is(:hover, :focus-visible) {
   top: 0;
 }
 @media (max-width: 760px) {
-  :is(#cooperation, #feedback, #future, #history, #faq, #menu, #extras) .illustrated-heading {
-    min-height: 320px;
-  }
   :is(#cooperation, #feedback, #future, #history, #faq, #menu, #extras)
     .illustrated-heading
     .heading-art {
-    left: 66%;
-    width: 48vw;
-    height: auto;
-    max-height: 340px;
-    top: 50px;
     object-position: left top;
   }
   #cooperation .edge-branch {
@@ -676,7 +642,6 @@ header #language-choice {
 .together-block > p {
   max-width: 850px;
   margin: 24px auto;
-  font-size: 18px;
 }
 .together-block h2 {
   text-align: center;
@@ -691,8 +656,6 @@ header #language-choice {
     bottom: 0;
     left: auto;
     right: calc(56% + 35px);
-    width: min(44vw, 620px);
-    max-height: 620px;
     object-fit: contain;
   }
   #format .illustrated-heading {

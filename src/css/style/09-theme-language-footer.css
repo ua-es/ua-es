@@ -1,6 +1,5 @@
 /* Частина 09: Мова, тема, темний режим, шапка, підвал, юридичні блоки.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 .language-switch {
   display: inline-flex;
   gap: 2px;
@@ -33,9 +32,6 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-header {
-  flex-wrap: wrap;
-}
 .brand-wordmark small {
   white-space: normal;
   text-align: center;
@@ -63,15 +59,6 @@ html[lang="es"] .brand-wordmark small {
   .language-switch a[aria-current="page"] {
     outline: 1px solid #85acd8;
   }
-}
-#organization .equipment-marquee {
-  overflow: visible;
-  padding: 18px 0 24px;
-}
-#organization .equipment-group {
-  min-width: 0;
-  padding: 0;
-  width: 100%;
 }
 #organization .equipment-group .kit-scroll-item {
   height: clamp(42px, 10vw, 125px);
@@ -134,12 +121,10 @@ header .brand-lockup {
   display: flex;
   flex-direction: column;
   width: 190px;
-  gap: 3px;
 }
 header .brand-logo {
   display: block;
   width: 100%;
-  height: 45px;
 }
 header .brand-lockup small {
   font:
@@ -172,10 +157,8 @@ header #navigation a {
 }
 header .header-controls {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 9px;
-  flex-wrap: nowrap;
 }
 header #theme-choice {
   display: none !important;
@@ -273,9 +256,6 @@ header #theme-choice {
   header .brand-lockup {
     width: 135px;
   }
-  header .brand-logo {
-    height: 34px;
-  }
   header .brand-flags {
     width: 38px;
     height: 32px;
@@ -329,19 +309,10 @@ header #theme-choice {
   overflow: visible;
 }
 #organization .equipment-group {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   gap: 0;
-  width: 100%;
-  min-width: 0;
 }
 #organization .equipment-group .kit-scroll-item {
   flex: 1 1 0;
-  object-position: center bottom;
-  margin: 0 !important;
-  transform: none !important;
-  align-self: flex-end;
 }
 #organization .equipment-group :is(.kit-canopy, .kit-tarp) {
   flex-grow: 1.7;
@@ -461,7 +432,6 @@ header #theme-choice {
   height: 100%;
   min-height: 310px;
   aspect-ratio: auto;
-  border-radius: 8px 0 0 8px;
   box-shadow: none;
   z-index: 3;
   align-self: stretch;
@@ -536,12 +506,8 @@ header #theme-choice {
   line-height: 1.7;
 }
 footer .footer-grid {
-  display: grid;
   grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr));
   gap: 48px;
-}
-footer .footer-grid > div {
-  min-width: 0;
 }
 footer .brand {
   display: flex;
@@ -557,7 +523,6 @@ footer .brand-lockup {
 }
 footer .brand-logo {
   width: 100%;
-  height: 45px;
   display: block;
 }
 footer .brand-lockup small {

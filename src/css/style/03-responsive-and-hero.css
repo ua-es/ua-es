@@ -1,6 +1,5 @@
 /* Частина 03: Перший шар адаптивності, hero-слайдер, організація, комплект, інвентар.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 [data-theme="night"] .pill {
   border: 1px solid var(--line);
 }
@@ -56,12 +55,8 @@
   html {
     scroll-padding-top: 85px;
   }
-  .container {
-    width: 90%;
-  }
   header {
     padding: 12px 5%;
-    min-height: 77px;
   }
   .brand {
     font-size: 26px;
@@ -123,9 +118,6 @@
   .hero-caption {
     font-size: 13px;
   }
-  .section {
-    padding-block: 52px;
-  }
   .section-heading {
     margin-bottom: 30px;
   }
@@ -166,7 +158,6 @@
     padding: 10px 14px;
   }
   .equipment-strip {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
     margin-bottom: 30px;
   }
@@ -218,10 +209,6 @@
   .lead {
     font-size: 18px;
   }
-  .menu-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px 15px;
-  }
   .dish-copy {
     padding: 8px 0 15px;
   }
@@ -242,7 +229,6 @@
     height: 155px;
   }
   .preparation {
-    padding: 25px;
     gap: 24px;
   }
   .preparation h3 {
@@ -314,7 +300,6 @@
     font-size: 15px;
   }
   .final-cta {
-    padding-block: 60px 120px;
     min-height: 470px;
   }
   .final-bridge {
@@ -338,9 +323,6 @@
     padding-top: 20px;
     padding-right: 15px;
   }
-  .modal-heading h2 {
-    font-size: 38px;
-  }
   .form-grid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -350,7 +332,6 @@
   }
   .participant-fields {
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
   }
   .consent,
   .form-note {
@@ -398,15 +379,6 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *:before,
-  *:after {
-    animation: none !important;
-    transition: none !important;
-  }
   .motion-enabled [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
@@ -421,13 +393,6 @@
 .future {
   overflow: hidden;
 }
-.future-arch {
-  right: -210px;
-  bottom: -20px;
-  width: 440px;
-  height: 650px;
-  opacity: 0.18;
-}
 .future > .container {
   position: relative;
   z-index: 1;
@@ -435,10 +400,6 @@
 @media (max-width: 760px) {
   .equipment-strip {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .future-arch {
-    right: -260px;
-    opacity: 0.1;
   }
 }
 dialog {
@@ -801,9 +762,6 @@ dialog {
 }
 .format-oranges {
   right: -105px;
-}
-.future-arch {
-  opacity: 0.8;
 }
 .cooperation-balcony {
   right: -130px;

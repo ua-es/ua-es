@@ -1,6 +1,5 @@
 /* Частина 11: Зустріч, кнопки, допомога, подія.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 :root {
   --page-gutter: clamp(20px, 5vw, 80px);
 }
@@ -76,7 +75,6 @@ body .button:after {
   pointer-events: none;
   border-radius: inherit;
   background: url(../assets/button-tile-shadow.svg) center/100% 100%;
-  clip-path: inset(0 round 8px);
   opacity: 0.75;
 }
 body .button {
@@ -336,9 +334,6 @@ body[data-theme="night"] .text-button {
     padding-right: 16px;
     gap: 8px;
   }
-  #extras .menu-wishes strong {
-    font-size: 20px;
-  }
   #extras .menu-wishes > span:not(.wish-art) {
     font-size: 12px;
   }
@@ -395,7 +390,6 @@ body .button:after {
   );
 }
 #event .event-date {
-  font-size: clamp(44px, 4vw, 56px) !important;
   min-width: 104px;
   padding: 14px 20px !important;
   background: #ffd168 !important;
@@ -437,17 +431,11 @@ body .button:after {
 #meeting-types .meeting-photo {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-  border-radius: 12px;
-  aspect-ratio: 4/3;
   width: 100%;
 }
 #meeting-types .meeting-photo img {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   margin: 0;
 }
 #meeting-types .meeting-photo:after {
@@ -491,10 +479,6 @@ body .button:after {
   color: #102b50;
   translate: none;
 }
-#meeting-types .meeting-formats > article > p {
-  margin: 16px 0 0;
-  line-height: 1.65;
-}
 #meeting-types .meeting-flowers {
   position: absolute !important;
   inset: -100px auto auto -90px;
@@ -502,5 +486,4 @@ body .button:after {
   height: 280px;
   z-index: -1;
   pointer-events: none;
-  transform: rotate(-12deg);
 }

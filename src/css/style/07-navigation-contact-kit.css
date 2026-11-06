@@ -1,6 +1,5 @@
 /* Частина 07: Навігація, контакти, запит, комплект, додатки.
    Файли з'єднуються за номерами; порядок визначає каскад, не змінюйте його. */
-
 .direction-controls {
   display: flex;
   align-items: center;
@@ -115,7 +114,6 @@
 #cooperation .illustrated-heading {
   grid-template-columns: 38% minmax(0, 1fr);
   position: relative;
-  min-height: 290px;
 }
 #cooperation .heading-copy {
   grid-column: 2;
@@ -318,23 +316,9 @@ main {
   white-space: nowrap;
   text-transform: uppercase;
 }
-footer .brand {
-  margin-bottom: 20px;
-}
-footer .footer-grid > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
 footer h3 {
   font-size: 25px;
   margin-bottom: 8px;
-}
-footer .social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 .social-links a {
   width: 44px;
@@ -537,7 +521,6 @@ footer .social-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 22px;
   min-width: 0;
 }
 #help .help-options > p {
@@ -551,14 +534,9 @@ footer .social-links {
 #help .help-options > .button {
   isolation: isolate;
   position: relative;
-  overflow: hidden;
-  background: #ffcf63;
-  color: #153a6d;
-  border-color: #ffcf63;
   padding: 17px 30px;
 }
 #help .help-options > .button:before {
-  content: "";
   position: absolute;
   inset: 0;
   background: url(../assets/patterns/azulejo-wide.svg) center/auto 100%;
@@ -588,7 +566,6 @@ footer .social-links {
 #history .gallery-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: 1fr;
-  gap: 14px;
 }
 #history .gallery-grid button:nth-child(n) {
   grid-column: span 1;
@@ -602,12 +579,9 @@ footer .social-links {
   aspect-ratio: auto;
 }
 #extras .extras-layout {
-  width: 100vw;
   margin-inline: calc(50% - 50vw);
   grid-template-columns: minmax(0, 1fr) 190px;
-  gap: 16px;
   padding-right: 3vw;
-  align-items: center;
 }
 #extras .extra-grid {
   padding-left: 4vw;
