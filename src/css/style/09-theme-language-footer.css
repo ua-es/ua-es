@@ -390,10 +390,10 @@ header #theme-choice {
   gap: 16px;
 }
 #menu .menu-card {
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  transform: none !important;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  transform: none;
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -403,31 +403,31 @@ header #theme-choice {
 }
 #menu .menu-card:before,
 #menu .menu-card:after {
-  display: none !important;
+  display: none;
 }
 #menu .menu-card .dish-copy {
-  background: transparent !important;
-  border-radius: 0 !important;
-  color: inherit !important;
+  background: transparent;
+  border-radius: 0;
+  color: inherit;
   padding: 14px 8px;
   flex: 0 0 auto;
 }
 #menu .menu-card:hover .dish-copy,
 #menu .menu-card:focus-within .dish-copy {
-  background: transparent !important;
-  color: inherit !important;
+  background: transparent;
+  color: inherit;
 }
 #menu .menu-card:is(:hover, :focus-within) .dish-copy h3,
 #menu .dish-title:hover {
-  color: #b84b0b !important;
+  color: #b84b0b;
 }
 #menu .menu-card .dish-copy p {
-  color: var(--muted, #4d6172) !important;
+  color: var(--muted, #4d6172);
 }
 #menu .dish-scene {
-  border: 0 !important;
-  box-shadow: none !important;
-  transform: none !important;
+  border: 0;
+  box-shadow: none;
+  transform: none;
 }
 #menu .dish-copy h3 {
   font-size: clamp(20px, 2.1vw, 30px);
