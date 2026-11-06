@@ -8,7 +8,7 @@
 const PLACEHOLDER = /\{\{([\w.-]+)\}\}/g;
 
 /** Keys that are computed from src/languages.json instead of read from a catalog. */
-export const COMPUTED_PREFIXES = ["language.", "site."];
+export const COMPUTED_PREFIXES = ["language.", "site.", "meeting."];
 
 export function isComputedKey(key) {
   return COMPUTED_PREFIXES.some((prefix) => key.startsWith(prefix));

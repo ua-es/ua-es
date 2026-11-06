@@ -369,13 +369,13 @@
     }
   },
   "page": {
-    "date": "28 de noviembre de 2026 · 11:00",
+    "date": "{date}",
     "privacy": "Privacidad",
     "cookies": "Cookies y preferencias",
     "terms": "Condiciones de participación",
     "close": "Cerrar",
     "nav": "Navegación",
-    "event": "Proponemos reunirnos el 28 de noviembre de 2026 a las 11:00, hora de España. El lugar, el menú y la aportación siguen pendientes. La cuenta atrás corresponde a una fecha provisional y no confirma el evento.",
+    "event": "Proponemos reunirnos el {date}, hora de España. El lugar, el menú y la aportación siguen pendientes. La cuenta atrás corresponde a una fecha provisional y no confirma el evento.",
     "notice": "Este sitio guarda localmente el tema que eliges. El código de la página no contiene rastreadores publicitarios ni analíticos.",
     "ok": "Entendido"
   },

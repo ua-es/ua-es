@@ -1,4 +1,8 @@
 import { expect, test } from "@playwright/test";
+import { readFileSync } from "node:fs";
+const eventSettings = JSON.parse(
+  readFileSync(new URL("../../src/data/event.json", import.meta.url), "utf8")
+);
 
 const cityMapIds = [
   "sevilla",
@@ -498,7 +502,7 @@ const cityDescriptionIds = [
 const pageErrors = new WeakMap();
 
 test.beforeEach(async ({ page }) => {
-  await page.clock.install({ time: new Date("2026-11-01T12:00:00Z") });
+  await page.clock.install({ time: new Date(Date.parse(eventSettings.startsAt) - 27 * 86400000) });
   const errors = [];
   pageErrors.set(page, errors);
   page.on("pageerror", (error) => errors.push(error.message));
@@ -831,7 +835,8 @@ test("event information opens its provisional-date dialog", async ({ page }) => 
 
   const dialog = page.locator("#planned-event-modal");
   await expect(dialog).toBeVisible();
-  await expect(dialog).toContainText("28 листопада 2026");
+  const date = await page.locator(".event-countdown").getAttribute("data-event-label");
+  await expect(dialog).toContainText(date);
   await dialog.locator("button").click();
   await expect(dialog).toBeHidden();
 });

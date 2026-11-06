@@ -16,6 +16,7 @@
 // ============================================================
 
 import * as esbuild from "esbuild";
+import { eventVariables } from "./tools/event-data.js";
 import { checkBundleSize } from "./tools/bundle-budget.js";
 import { mkdir, readFile, writeFile, watch } from "node:fs/promises";
 import { dirname } from "node:path";
@@ -133,7 +134,11 @@ async function buildLocaleBundle({ src, out }) {
 
 async function buildPage({ locale, out }, template) {
   const content = JSON.parse(await readFile(`src/content/${locale}.json`, "utf8"));
-  const computed = languageVariables(languageSettings, locale);
+  const event = JSON.parse(await readFile("src/data/event.json", "utf8"));
+  const computed = {
+    ...languageVariables(languageSettings, locale),
+    ...eventVariables(event, locale),
+  };
   await mkdir(dirname(out), { recursive: true });
   await writeFile(out, renderPage(template, content, locale, computed), "utf8");
   console.log(`  ✓ ${out.padEnd(28)} (${locale})`);

@@ -1,3 +1,4 @@
+import { eventVariables } from "../tools/event-data.js";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
@@ -11,6 +12,13 @@ import {
 const languageSettings = JSON.parse(
   await readFile(new URL("../src/languages.json", import.meta.url), "utf8")
 );
+const event = JSON.parse(
+  await readFile(new URL("../src/data/event.json", import.meta.url), "utf8")
+);
+const computedValues = (locale) => ({
+  ...languageVariables(languageSettings, locale),
+  ...eventVariables(event, locale),
+});
 const locales = languageSettings.languages.map((language) => language.code);
 const template = await readFile(new URL("../src/html/page.html", import.meta.url), "utf8");
 const catalogs = Object.fromEntries(
@@ -31,7 +39,7 @@ test("every locale defines exactly the keys used by the page template", () => {
 
 test("pages render without leftover placeholders", () => {
   for (const locale of locales) {
-    const computed = languageVariables(languageSettings, locale);
+    const computed = computedValues(locale);
     const html = renderPage(template, catalogs[locale], locale, computed);
     assert.doesNotMatch(html, /\{\{[\w.-]+\}\}/, `placeholders left in ${locale}`);
     assert.match(html, new RegExp(`<html lang="${locale}"`));
@@ -47,12 +55,7 @@ test("the language list is consistent", () => {
   assert.equal(new Set(codes).size, codes.length, "language codes are unique");
   assert.ok(codes.includes(languageSettings.defaultLanguage), "default language is listed");
   for (const locale of locales) {
-    const html = renderPage(
-      template,
-      catalogs[locale],
-      locale,
-      languageVariables(languageSettings, locale)
-    );
+    const html = renderPage(template, catalogs[locale], locale, computedValues(locale));
     for (const code of codes) {
       assert.ok(html.includes(`hreflang="${code}"`), `${locale} page links to ${code}`);
       assert.ok(html.includes(`<option value="${code}"`), `${locale} switcher offers ${code}`);

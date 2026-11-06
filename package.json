@@ -9,8 +9,8 @@
     "test": "npm run test:unit && playwright test",
     "test:unit": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
-    "format": "prettier --write build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
-    "format:check": "prettier --check build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
+    "format": "prettier --write build.js tools src/data src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
+    "format:check": "prettier --check build.js tools src/data src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
     "images:generate": "node tools/generate-responsive-images.js"
   },
   "repository": {

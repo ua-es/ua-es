@@ -369,13 +369,13 @@
     }
   },
   "page": {
-    "date": "28 November 2026 · 11:00",
+    "date": "{date}",
     "privacy": "Privacy",
     "cookies": "Cookies and preferences",
     "terms": "Participation terms",
     "close": "Close",
     "nav": "Navigation",
-    "event": "We provisionally plan to meet on 28 November 2026 at 11:00 Spanish time. The venue, menu and contribution are still to be agreed. The countdown shows the provisional date and does not confirm the event.",
+    "event": "We provisionally plan to meet on {date}, Spanish time. The venue, menu and contribution are still to be agreed. The countdown shows the provisional date and does not confirm the event.",
     "notice": "This site stores your chosen theme locally. The page code contains no advertising or analytics trackers.",
     "ok": "Understood"
   },

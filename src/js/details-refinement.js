@@ -104,8 +104,9 @@
     menuButton.setAttribute("aria-expanded", "false");
   });
 
-  const eventDialog = createDialog("planned-event-modal", window.i18n.t("page.date"));
-  eventDialog.querySelector(".dialog-content").textContent = window.i18n.t("page.event");
+  const eventDate = { date: document.querySelector(".event-countdown").dataset.eventLabel };
+  const eventDialog = createDialog("planned-event-modal", window.i18n.t("page.date", eventDate));
+  eventDialog.querySelector(".dialog-content").textContent = window.i18n.t("page.event", eventDate);
   document.addEventListener(
     "click",
     (event) => {

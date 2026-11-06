@@ -129,6 +129,14 @@ Actions).
 There is no `make deploy` target. A deployment can also be started manually
 from the Actions tab (`workflow_dispatch`).
 
+### Meeting data
+
+Edit `src/data/event.json` to change the meeting instant (with an explicit UTC
+offset), venue timezone, map URL, or venue label. The build generates the countdown
+start, localized date, calendar badge, and information dialog date from this
+record. Keep localized descriptions in the content and locale catalogs; use
+`{date}` in runtime messages instead of repeating a date by hand.
+
 ### Responsive photographs
 
 The original photographs remain in `images/` for lightboxes. Smaller 480px and

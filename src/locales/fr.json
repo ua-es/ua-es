@@ -369,13 +369,13 @@
     }
   },
   "page": {
-    "date": "28 novembre 2026 · 11:00",
+    "date": "{date}",
     "privacy": "Confidentialité",
     "cookies": "Cookies et paramètres",
     "terms": "Conditions de participation",
     "close": "Fermer",
     "nav": "Navigation",
-    "event": "Nous prévoyons provisoirement une rencontre le 28 novembre 2026 à 11:00, heure d’Espagne. Le lieu, le menu et la participation aux frais restent à convenir. Le compte à rebours indique le temps restant jusqu’à la date provisoire et ne confirme pas l’événement.",
+    "event": "Nous prévoyons provisoirement une rencontre le {date}, heure d’Espagne. Le lieu, le menu et la participation aux frais restent à convenir. Le compte à rebours indique le temps restant jusqu’à la date provisoire et ne confirme pas l’événement.",
     "notice": "Ce site utilise le stockage local pour mémoriser le thème choisi. Le code de la page ne contient aucun traceur publicitaire ou d’analyse.",
     "ok": "Compris"
   },
