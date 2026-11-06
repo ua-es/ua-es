@@ -710,15 +710,6 @@ import { initializeContactForm } from "./contact-form.js";
   querySelectorAll("[data-icon]").forEach((icon) => {
     icon.innerHTML = `<svg viewBox="0 0 32 32" aria-hidden="true"><use href="assets/ui-icons-v6.svg#${icon.dataset.icon}"></use></svg>`;
   });
-  function loadCityPreview(event) {
-    const cityCard = event.target.closest(".map-pin,.city-card");
-    if (!cityCard) return;
-    const previewImage = cityCard.querySelector("[data-city-preview]");
-    if (!previewImage || previewImage.hasAttribute("src")) return;
-    previewImage.src = getCityPreview(previewImage.dataset.cityPreview);
-  }
-  document.addEventListener("pointerover", loadCityPreview);
-  document.addEventListener("focusin", loadCityPreview);
   const featuredCityGroups = [
     [
       "fuengirola",

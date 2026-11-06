@@ -36,8 +36,7 @@
   }
 
   function getCityPreview(cityId) {
-    const imagePath = getCityImage(cityId);
-    return imagePath.includes("isolated") ? imagePath : imagePath.replace(".webp", "-thumb.webp");
+    return getCityImage(cityId).replace(".webp", "-thumb.webp");
   }
 
   function isPhoneNumber(value) {
@@ -72,7 +71,7 @@
   function renderCityCard(city) {
     const statusLabel = window.i18n.t(city.isPast ? "city.map.cityPast" : "city.map.cityPlanned");
 
-    return `<button class="city-card ${city.isPast ? "past" : "planned"}" data-city="${city.id}"><img class="map-city-preview" data-city-preview="${city.id}" src="${getCityPreview(city.id)}" loading="lazy" alt="" width="180" height="120"><i class="city-status-dot" role="img" aria-label="${statusLabel}"></i><strong>${city.name}</strong></button>`;
+    return `<button class="city-card ${city.isPast ? "past" : "planned"}" data-city="${city.id}"><img class="map-city-preview" src="${getCityPreview(city.id)}" loading="lazy" alt="" width="180" height="120"><i class="city-status-dot" role="img" aria-label="${statusLabel}"></i><strong>${city.name}</strong></button>`;
   }
 
   window.picnicAppHelpers = {
