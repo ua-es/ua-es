@@ -27,6 +27,9 @@ jobs:
       - name: Check formatting
         run: npm run format:check
 
+      - name: Check generated files are up to date
+        run: npm run check:generated
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 

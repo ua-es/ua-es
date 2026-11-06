@@ -27,6 +27,7 @@ before starting the server.
 | `make check`             | Run unit and Chromium end-to-end tests.                         |
 | `make format`            | Format JavaScript, CSS, and translation sources.                |
 | `npm run format:check`   | Check formatting without changing files.                        |
+| `npm run check:generated` | Rebuild and fail if committed generated files change.          |
 | `make watch`             | Build once, then rebuild when files in `src/` change.           |
 | `make serve`             | Build assets and serve the site at `http://localhost:$(PORT)/`. |
 | `make dev`               | Watch source files and serve the site for local development.    |
@@ -113,7 +114,9 @@ regenerate them.
 Playwright starts a local server and builds the site before browser tests.
 `make check` (or `npm test`) runs unit tests and the complete Chromium
 end-to-end suite. The unit tests also check that locale keys, translations, and
-interpolation placeholders match across all languages.
+interpolation placeholders match across all languages. CI also runs
+`npm run check:generated`, which rebuilds the site and fails when the committed
+pages, `js/`, `css/` or `sitemap.xml` differ from what `src/` produces.
 
 ## Deployment
 

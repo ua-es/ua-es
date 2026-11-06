@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node build.js",
     "watch": "node build.js --watch",
+    "check:generated": "node tools/check-generated.js",
     "test": "npm run test:unit && playwright test",
     "test:unit": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
