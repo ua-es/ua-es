@@ -542,6 +542,7 @@ for (const language of languages) {
   test(`${language.code}: carousel, dish details, and city map work`, async ({ page }) => {
     await page.goto(language.path);
 
+    await page.locator("#geography").scrollIntoViewIfNeeded();
     await expect(page.locator("#map-title")).toHaveText(language.mapTitleSpain);
     for (const cityId of cityMapIds) {
       const expectedName = await page.evaluate((id) => window.i18n.t(`city.name.${id}`), cityId);
@@ -999,3 +1000,23 @@ for (const offset of [-1000, 0, 1000]) {
     await expect(page.locator(".countdown-ended")).toBeVisible({ visible: offset >= 0 });
   });
 }
+
+test("map contours load only when the geography section approaches", async ({ page }) => {
+  const requests = [];
+  page.on("request", (request) => {
+    if (request.url().endsWith("/assets/maps/paths.json")) requests.push(request.url());
+  });
+  await page.goto("/");
+  expect(requests).toHaveLength(0);
+  await page.locator("#geography").scrollIntoViewIfNeeded();
+  await expect(page.locator("#map-canvas .map-pin").first()).toBeAttached();
+  expect(requests).toHaveLength(1);
+});
+
+test("map remains usable when contour data cannot load", async ({ page }) => {
+  await page.route("**/assets/maps/paths.json", (route) => route.abort());
+  await page.goto("/#geography");
+  await page.locator('button[data-map="portugal"]').click();
+  await expect(page.locator("#city-scroller [data-city]").first()).toBeVisible();
+  await expect(page.locator('button[data-map="portugal"]')).toHaveAttribute("aria-pressed", "true");
+});

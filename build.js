@@ -144,6 +144,7 @@ async function buildAll() {
   const template = await readFile("src/html/page.html", "utf8");
   await Promise.all([
     ...pages.map((page) => buildPage(page, template)),
+    readFile("src/data/map-paths.json").then((data) => writeFile("assets/maps/paths.json", data)),
     writeFile("sitemap.xml", renderSitemap(languageSettings), "utf8"),
     ...jsBundles.map((b) => buildBundle(b)),
     ...localeBundles.map((bundle) => buildLocaleBundle(bundle)),
