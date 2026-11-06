@@ -498,6 +498,7 @@ const cityDescriptionIds = [
 const pageErrors = new WeakMap();
 
 test.beforeEach(async ({ page }) => {
+  await page.clock.install({ time: new Date("2026-11-01T12:00:00Z") });
   const errors = [];
   pageErrors.set(page, errors);
   page.on("pageerror", (error) => errors.push(error.message));
@@ -987,3 +988,14 @@ test("FAQ keeps only the selected answer open", async ({ page }) => {
   await expect(questions.nth(1)).toHaveAttribute("open", "");
   await expect(questions.nth(0)).not.toHaveAttribute("open", "");
 });
+
+for (const offset of [-1000, 0, 1000]) {
+  test(`countdown handles event boundary ${offset}ms`, async ({ page }) => {
+    await page.goto("/");
+    const startsAt = await page.locator(".event-countdown").getAttribute("data-event-start");
+    await page.clock.setSystemTime(new Date(Date.parse(startsAt) + offset));
+    await page.evaluate(() => document.dispatchEvent(new Event("visibilitychange")));
+    await expect(page.locator(".countdown-units")).toBeVisible({ visible: offset < 0 });
+    await expect(page.locator(".countdown-ended")).toBeVisible({ visible: offset >= 0 });
+  });
+}
