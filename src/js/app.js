@@ -798,20 +798,23 @@ import { initializeContactForm } from "./contact-form.js";
   const navigationSections = sectionNavigationLinks
     .map((link) => ({ link, section: querySelector(link.getAttribute("href")) }))
     .filter((item) => item.section);
+  const navigationHeader = querySelector("header");
+  let previousActiveSection;
   let navigationUpdateFrame = 0;
   function updateActiveNavigationLink() {
     navigationUpdateFrame = 0;
-    const navigationThreshold = (document.querySelector("header")?.offsetHeight || 80) + 100;
+    const navigationThreshold = (navigationHeader?.offsetHeight || 80) + 100;
     let activeSection = navigationSections[0];
-    const sortedSections = [...navigationSections].sort(
-      (first, second) =>
-        first.section.getBoundingClientRect().top - second.section.getBoundingClientRect().top
-    );
-    for (const section of sortedSections) {
-      if (section.section.getBoundingClientRect().top <= navigationThreshold) {
-        activeSection = section;
+    let activeTop = -Infinity;
+    for (const item of navigationSections) {
+      const top = item.section.getBoundingClientRect().top;
+      if (top <= navigationThreshold && top >= activeTop) {
+        activeSection = item;
+        activeTop = top;
       }
     }
+    if (activeSection === previousActiveSection) return;
+    previousActiveSection = activeSection;
     for (const item of navigationSections) {
       const isActive = item === activeSection;
       item.link.classList.toggle("is-current", isActive);
