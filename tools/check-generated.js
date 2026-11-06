@@ -12,6 +12,7 @@ const generatedPaths = [
   "js",
   "sitemap.xml",
   "assets/maps/paths.json",
+  "assets/maps/cities.json",
 ];
 
 execFileSync("node", ["build.js"], { stdio: "inherit" });

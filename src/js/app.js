@@ -20,91 +20,17 @@ import { initializeContactForm } from "./contact-form.js";
     "decor-lemon-blossom",
   ];
   let mapPathDataByRegion = {};
-  const primaryCityMapEntries = [
-      ["sevilla", true, 570, 736, "andalucia"],
-      ["malaga", true, 746, 823, "andalucia"],
-      ["torremolinos", true, 729, 831, "andalucia"],
-      ["benalmadena", true, 713, 837, "andalucia"],
-      ["marbella", true, 661, 850, "andalucia"],
-      ["jerez", true, 541, 805, "andalucia"],
-      ["valencia", true, 1070, 540, "spain"],
-      ["granada", false, 846, 770, "andalucia"],
-      ["cordoba", false, 702, 705, "andalucia"],
-      ["madrid", false, 790, 461, "spain"],
-      ["alicante", false, 1078, 650, "spain"],
-      ["asturias", false, 631, 143, "spain"],
-      ["fuengirola", false, 695, 843, "andalucia"],
-      ["san-pedro", true, 642, 850, "andalucia"],
-      ["cadiz", false, 507, 810, "andalucia"],
-      ["huelva", false, 473, 746, "andalucia"],
-      ["barcelona", false, 1235, 332, "spain"],
-      ["portugal", false, 345, 620, "portugal"],
-      ["chiclana", false, 523, 835, "andalucia"],
-    ],
-    cityCoordinates = {
-      sevilla: [-5.9845, 37.3891],
-      malaga: [-4.4214, 36.7213],
-      torremolinos: [-4.4997, 36.6218],
-      benalmadena: [-4.5167, 36.5969],
-      marbella: [-4.8858, 36.5101],
-      jerez: [-6.137, 36.685],
-      valencia: [-0.3763, 39.4699],
-      granada: [-3.5986, 37.1773],
-      cordoba: [-4.7794, 37.8882],
-      madrid: [-3.7038, 40.4168],
-      alicante: [-0.4907, 38.3452],
-      asturias: [-5.8494, 43.3619],
-      fuengirola: [-4.625, 36.539],
-      "san-pedro": [-4.991, 36.487],
-      cadiz: [-6.2886, 36.5271],
-      huelva: [-6.9447, 37.2614],
-      barcelona: [2.1734, 41.3851],
-      portugal: [-8.3, 39.5],
-      chiclana: [-6.1494, 36.4194],
-    };
-  for (const [cityId, longitude, latitude] of [
-    ["lisbon", -9.1393, 38.7223],
-    ["porto", -8.6291, 41.1579],
-    ["faro", -7.9304, 37.0194],
-    ["coimbra", -8.4292, 40.2033],
-  ]) {
-    primaryCityMapEntries.push([cityId, false, 0, 0, "portugal"]);
-    cityCoordinates[cityId] = [longitude, latitude];
-  }
-  const additionalCityMapEntries = [
-    ["bilbao", -2.935, 43.263, "spain"],
-    ["santander", -3.81, 43.462, "spain"],
-    ["santiago", -8.544, 42.879, "spain"],
-    ["coruna", -8.411, 43.362, "spain"],
-    ["vigo", -8.72, 42.24, "spain"],
-    ["leon", -5.567, 42.599, "spain"],
-    ["zaragoza", -0.889, 41.649, "spain"],
-    ["pamplona", -1.644, 42.813, "spain"],
-    ["jaen", -3.79, 37.78, "andalucia"],
-    ["almeria", -2.46, 36.84, "andalucia"],
-    ["ronda", -5.16, 36.74, "andalucia"],
-    ["dos-hermanas", -5.92, 37.28, "andalucia"],
-    ["rinconada", -5.98, 37.49, "andalucia"],
-    ["nerja", -3.88, 36.75, "andalucia"],
-    ["estepona", -5.14, 36.43, "andalucia"],
-    ["tarifa", -5.6, 36.01, "andalucia"],
-  ];
-
-  for (const [cityId, longitude, latitude, region] of additionalCityMapEntries) {
-    primaryCityMapEntries.push([cityId, false, 0, 0, region]);
-    cityCoordinates[cityId] = [longitude, latitude];
-  }
-  const mapCities = primaryCityMapEntries.map(([cityId, isPast, , , region]) => {
-    const [longitude, latitude] = cityCoordinates[cityId];
-    return {
-      id: cityId,
-      name: window.i18n.t(`city.name.${cityId}`),
-      isPast,
-      mapX: (longitude + 10) * 70,
-      mapY: (44.5 - latitude) * 94,
+  let mapCities = [];
+  function buildMapCities(cityRecords) {
+    return cityRecords.map(({ id, past, region, lon, lat }) => ({
+      id,
+      name: window.i18n.t(`city.name.${id}`),
+      isPast: past,
+      mapX: (lon + 10) * 70,
+      mapY: (44.5 - lat) * 94,
       region,
-    };
-  });
+    }));
+  }
   function renderMapIllustration() {
     const overviewCityIds = [
       "sevilla",
@@ -545,17 +471,30 @@ import { initializeContactForm } from "./contact-form.js";
     querySelector("#city-scroller").scrollLeft = 0;
   }
   let mapLoad;
+  async function fetchMapData(name) {
+    const response = await fetch(new URL(`assets/maps/${name}.json`, document.baseURI));
+    if (!response.ok) throw new Error(`Map data ${name}: HTTP ${response.status}`);
+    return response.json();
+  }
   async function initializeCityMap() {
     if (mapLoad) return mapLoad;
     mapLoad = (async () => {
-      try {
-        const response = await fetch(new URL("assets/maps/paths.json", document.baseURI));
-        if (!response.ok) throw new Error(`Map data: HTTP ${response.status}`);
-        mapPathDataByRegion = await response.json();
-      } catch (error) {
-        console.warn("Map contours unavailable; using the map illustrations.", error);
+      const [paths, cities] = await Promise.allSettled([
+        fetchMapData("paths"),
+        fetchMapData("cities"),
+      ]);
+      if (paths.status === "fulfilled") {
+        mapPathDataByRegion = paths.value;
+      } else {
+        console.warn("Map contours unavailable; using the map illustrations.", paths.reason);
+      }
+      if (cities.status === "fulfilled") {
+        mapCities = buildMapCities(cities.value);
+      } else {
+        console.warn("City data unavailable; the map shows no cities.", cities.reason);
       }
       renderCityMap("spain");
+      featuredCityCards.forEach((_, cardIndex) => renderDirectionCard(cardIndex));
     })();
     return mapLoad;
   }
@@ -569,6 +508,8 @@ import { initializeContactForm } from "./contact-form.js";
       { rootMargin: "600px" }
     );
     mapObserver.observe(querySelector("#geography"));
+    const locationList = querySelector(".location-list");
+    if (locationList) mapObserver.observe(locationList);
   } else {
     initializeCityMap();
   }
@@ -675,7 +616,7 @@ import { initializeContactForm } from "./contact-form.js";
     const mapButton = event.target.closest("[data-map]");
     if (mapButton) initializeCityMap().then(() => renderCityMap(mapButton.dataset.map));
     const cityButton = event.target.closest("[data-city]");
-    if (cityButton) openCityDetails(cityButton.dataset.city);
+    if (cityButton) initializeCityMap().then(() => openCityDetails(cityButton.dataset.city));
     const informationButton = event.target.closest("[data-info]");
     if (informationButton) openInformationDetails(informationButton.dataset.info);
     const cityScrollButton = event.target.closest("[data-scroll-cities]");

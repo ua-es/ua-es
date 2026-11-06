@@ -1,0 +1,275 @@
+[
+  {
+    "id": "sevilla",
+    "past": true,
+    "region": "andalucia",
+    "lon": -5.9845,
+    "lat": 37.3891
+  },
+  {
+    "id": "malaga",
+    "past": true,
+    "region": "andalucia",
+    "lon": -4.4214,
+    "lat": 36.7213
+  },
+  {
+    "id": "torremolinos",
+    "past": true,
+    "region": "andalucia",
+    "lon": -4.4997,
+    "lat": 36.6218
+  },
+  {
+    "id": "benalmadena",
+    "past": true,
+    "region": "andalucia",
+    "lon": -4.5167,
+    "lat": 36.5969
+  },
+  {
+    "id": "marbella",
+    "past": true,
+    "region": "andalucia",
+    "lon": -4.8858,
+    "lat": 36.5101
+  },
+  {
+    "id": "jerez",
+    "past": true,
+    "region": "andalucia",
+    "lon": -6.137,
+    "lat": 36.685
+  },
+  {
+    "id": "valencia",
+    "past": true,
+    "region": "spain",
+    "lon": -0.3763,
+    "lat": 39.4699
+  },
+  {
+    "id": "granada",
+    "past": false,
+    "region": "andalucia",
+    "lon": -3.5986,
+    "lat": 37.1773
+  },
+  {
+    "id": "cordoba",
+    "past": false,
+    "region": "andalucia",
+    "lon": -4.7794,
+    "lat": 37.8882
+  },
+  {
+    "id": "madrid",
+    "past": false,
+    "region": "spain",
+    "lon": -3.7038,
+    "lat": 40.4168
+  },
+  {
+    "id": "alicante",
+    "past": false,
+    "region": "spain",
+    "lon": -0.4907,
+    "lat": 38.3452
+  },
+  {
+    "id": "asturias",
+    "past": false,
+    "region": "spain",
+    "lon": -5.8494,
+    "lat": 43.3619
+  },
+  {
+    "id": "fuengirola",
+    "past": false,
+    "region": "andalucia",
+    "lon": -4.625,
+    "lat": 36.539
+  },
+  {
+    "id": "san-pedro",
+    "past": true,
+    "region": "andalucia",
+    "lon": -4.991,
+    "lat": 36.487
+  },
+  {
+    "id": "cadiz",
+    "past": false,
+    "region": "andalucia",
+    "lon": -6.2886,
+    "lat": 36.5271
+  },
+  {
+    "id": "huelva",
+    "past": false,
+    "region": "andalucia",
+    "lon": -6.9447,
+    "lat": 37.2614
+  },
+  {
+    "id": "barcelona",
+    "past": false,
+    "region": "spain",
+    "lon": 2.1734,
+    "lat": 41.3851
+  },
+  {
+    "id": "portugal",
+    "past": false,
+    "region": "portugal",
+    "lon": -8.3,
+    "lat": 39.5
+  },
+  {
+    "id": "chiclana",
+    "past": false,
+    "region": "andalucia",
+    "lon": -6.1494,
+    "lat": 36.4194
+  },
+  {
+    "id": "lisbon",
+    "past": false,
+    "region": "portugal",
+    "lon": -9.1393,
+    "lat": 38.7223
+  },
+  {
+    "id": "porto",
+    "past": false,
+    "region": "portugal",
+    "lon": -8.6291,
+    "lat": 41.1579
+  },
+  {
+    "id": "faro",
+    "past": false,
+    "region": "portugal",
+    "lon": -7.9304,
+    "lat": 37.0194
+  },
+  {
+    "id": "coimbra",
+    "past": false,
+    "region": "portugal",
+    "lon": -8.4292,
+    "lat": 40.2033
+  },
+  {
+    "id": "bilbao",
+    "past": false,
+    "region": "spain",
+    "lon": -2.935,
+    "lat": 43.263
+  },
+  {
+    "id": "santander",
+    "past": false,
+    "region": "spain",
+    "lon": -3.81,
+    "lat": 43.462
+  },
+  {
+    "id": "santiago",
+    "past": false,
+    "region": "spain",
+    "lon": -8.544,
+    "lat": 42.879
+  },
+  {
+    "id": "coruna",
+    "past": false,
+    "region": "spain",
+    "lon": -8.411,
+    "lat": 43.362
+  },
+  {
+    "id": "vigo",
+    "past": false,
+    "region": "spain",
+    "lon": -8.72,
+    "lat": 42.24
+  },
+  {
+    "id": "leon",
+    "past": false,
+    "region": "spain",
+    "lon": -5.567,
+    "lat": 42.599
+  },
+  {
+    "id": "zaragoza",
+    "past": false,
+    "region": "spain",
+    "lon": -0.889,
+    "lat": 41.649
+  },
+  {
+    "id": "pamplona",
+    "past": false,
+    "region": "spain",
+    "lon": -1.644,
+    "lat": 42.813
+  },
+  {
+    "id": "jaen",
+    "past": false,
+    "region": "andalucia",
+    "lon": -3.79,
+    "lat": 37.78
+  },
+  {
+    "id": "almeria",
+    "past": false,
+    "region": "andalucia",
+    "lon": -2.46,
+    "lat": 36.84
+  },
+  {
+    "id": "ronda",
+    "past": false,
+    "region": "andalucia",
+    "lon": -5.16,
+    "lat": 36.74
+  },
+  {
+    "id": "dos-hermanas",
+    "past": false,
+    "region": "andalucia",
+    "lon": -5.92,
+    "lat": 37.28
+  },
+  {
+    "id": "rinconada",
+    "past": false,
+    "region": "andalucia",
+    "lon": -5.98,
+    "lat": 37.49
+  },
+  {
+    "id": "nerja",
+    "past": false,
+    "region": "andalucia",
+    "lon": -3.88,
+    "lat": 36.75
+  },
+  {
+    "id": "estepona",
+    "past": false,
+    "region": "andalucia",
+    "lon": -5.14,
+    "lat": 36.43
+  },
+  {
+    "id": "tarifa",
+    "past": false,
+    "region": "andalucia",
+    "lon": -5.6,
+    "lat": 36.01
+  }
+]
