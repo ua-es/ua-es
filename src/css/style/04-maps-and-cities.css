@@ -462,9 +462,6 @@ html[data-theme="night"] {
 [data-theme="night"] #map-scenery {
   opacity: 0.38;
 }
-[data-theme="night"] .section-art {
-  filter: brightness(1.12) drop-shadow(0 2px 20px #d5e8ff17);
-}
 [data-theme="night"] .city-status {
   color: var(--green);
 }

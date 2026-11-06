@@ -328,6 +328,62 @@
       "title": "Apoyo que nos reúne."
     }
   },
+  "legal": {
+    "privacy": {
+      "title": {
+        "1": "Datos que compartes",
+        "2": "Para qué se utilizan",
+        "3": "Servicios externos"
+      },
+      "text": {
+        "1": "Esta página prepara una consulta con tu nombre, ciudad, contacto, número de participantes y preferencias. No envía el formulario a una base de datos propia: el mensaje llega a la organización solo tras tu acción en Telegram o tu aplicación de correo. No incluyas documentos ni diagnósticos médicos; para la comida, basta con indicar los ingredientes que debes evitar.",
+        "2": "La consulta sirve para responder y acordar la participación. El consentimiento para recibir novedades y publicar tu opinión es independiente y opcional. Puedes retirarlo y solicitar acceso, rectificación o supresión a la organización. También puedes reclamar ante la AEPD.",
+        "3": "Telegram, el correo y el alojamiento tratan datos según sus propias políticas, incluidos datos técnicos de conexión. Consulta esas políticas antes de usar sus servicios. El código de esta página no elabora perfiles publicitarios."
+      }
+    },
+    "cookies": {
+      "title": {
+        "1": "Tus preferencias",
+        "2": "Servicios externos",
+        "3": "Tu elección"
+      },
+      "text": {
+        "1": "La página guarda el tema elegido en localStorage con la clave picnic-theme. Es una preferencia visual en tu dispositivo y puedes borrarla desde los ajustes del navegador. El cierre de este aviso se recuerda solo hasta cerrar la pestaña.",
+        "2": "El código propio de la página no contiene rastreadores publicitarios ni analíticos. El acceso a la vista privada puede utilizar mecanismos técnicos del alojamiento. Los sitios externos se abren al seguir un enlace y tienen sus propias políticas.",
+        "3": "Si se añaden rastreadores opcionales, no deben activarse antes de que el usuario elija. Aceptar y rechazar deben ser igualmente accesibles."
+      }
+    },
+    "terms": {
+      "title": {
+        "1": "Confirmar la participación",
+        "2": "En el encuentro",
+        "3": "Fotos y respeto",
+        "4": "Tus derechos"
+      },
+      "text": {
+        "1": "Esta es una página informativa de la comunidad. Una consulta o una cuenta atrás no confirma la participación. Acuerda con la organización la fecha, el lugar, el menú, la aportación, el pago, los cambios y las devoluciones antes de transferir dinero.",
+        "2": "Cada persona trae sus bebidas. Los niños permanecen bajo la supervisión de los adultos que los acompañan. Respeta las normas del lugar, las restricciones sobre fuego y las condiciones acordadas.",
+        "3": "Respeta a los demás participantes y no publiques sus datos ni retratos identificables sin el permiso adecuado. Avisa si no quieres aparecer en fotos o si solicitas retirar una imagen.",
+        "4": "Estas condiciones no limitan los derechos legales."
+      }
+    }
+  },
+  "page": {
+    "date": "28 de noviembre de 2026 · 11:00",
+    "privacy": "Privacidad",
+    "cookies": "Cookies y preferencias",
+    "terms": "Condiciones de participación",
+    "close": "Cerrar",
+    "nav": "Navegación",
+    "event": "Proponemos reunirnos el 28 de noviembre de 2026 a las 11:00, hora de España. El lugar, el menú y la aportación siguen pendientes. La cuenta atrás corresponde a una fecha provisional y no confirma el evento.",
+    "notice": "Este sitio guarda localmente el tema que eliges. El código de la página no contiene rastreadores publicitarios ni analíticos.",
+    "ok": "Entendido"
+  },
+  "photoStory": {
+    "1": "Aquí es fácil empezar una conversación: un día compartido, sabores familiares y personas a las que apetece volver a ver.",
+    "2": "Pequeños momentos en buena compañía. Los encuentros permiten dejar a un lado las tareas diarias y pasar tiempo juntos.",
+    "3": "No hace falta conocer a todos de antemano. Una nueva amistad puede empezar con un simple saludo alrededor de la mesa."
+  },
   "request": {
     "availability": "Cuándo te viene bien: {value}",
     "city": "Ciudad / región: {city}.",
@@ -357,6 +413,10 @@
     },
     "transport": "Transporte: {value}",
     "yes": "sí"
+  },
+  "theme": {
+    "toNight": "Activar el tema oscuro",
+    "toDay": "Activar el tema claro"
   },
   "venueGallery": {
     "close": "Cerrar",

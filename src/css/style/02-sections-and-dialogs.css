@@ -939,9 +939,6 @@ html[data-theme="night"] {
   background: #23497b;
   color: #fff;
 }
-[data-theme="night"] .deco {
-  filter: brightness(1.15);
-}
 [data-theme="night"] .final-bridge {
   opacity: 0.45;
 }

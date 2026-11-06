@@ -1,0 +1,431 @@
+{
+  "city": {
+    "dialog": {
+      "contactContext": "Rencontre : {city}",
+      "defaultNew": "Nous rassemblons les volontaires. Quand il y aura assez de monde, nous conviendrons de la date, du lieu, du menu et des frais communs.",
+      "defaultPast": "Nous nous y sommes déjà retrouvés et pouvons recommencer. Nous réunirons un groupe, choisirons le lieu et déciderons ensemble du prochain jour.",
+      "description": {
+        "alicante": "Envie d’une rencontre à Alicante ? Nous rassemblons un groupe, convenons du format et préparons le déplacement.",
+        "asturias": "Nous voulons faire connaissance avec les Ukrainiens du nord de l’Espagne. La région pourrait devenir la prochaine destination s’il y a assez de volontaires.",
+        "benalmadena": "Nous nous sommes déjà retrouvés à Benalmádena. Nous pouvons recommencer si assez de participants se réunissent.",
+        "cordoba": "Une aire de loisirs près de Cordoue, avec des tables et de l’ombre. Une option à discuter avec la communauté ukrainienne locale.",
+        "granada": "Une aire de détente dans la commune de Monachil, avec des tables de pique-nique. Destination possible si un groupe intéressé se forme.",
+        "huelva": "L’un des principaux espaces verts de Huelva. Nous envisageons un pique-nique en ville ou une rencontre en pleine nature, selon l’intérêt des participants.",
+        "jerez": "Nos pique-niques ont déjà eu lieu à Jerez. Nous organiserons la prochaine rencontre quand assez de volontaires se manifesteront. Le lieu et la date seront décidés ensemble.",
+        "madrid": "Madrid est l’une des destinations où nous voulons apporter notre format. L’essentiel est d’avoir assez de volontaires.",
+        "malaga": "Nous nous y sommes déjà retrouvés le 3 octobre 2026. Une plage avec un rocher caractéristique : une idée pour une nouvelle journée au bord de la mer. Il n’y a pas encore de prochaine date.",
+        "marbella": "Un parc de pins en ville, que nous envisageons pour un pique-nique en famille et des rencontres. Le programme définitif et la date seront fixés selon l’intérêt des participants.",
+        "portugal": "Nous envisageons un déplacement au Portugal. D’abord nous recueillons l’intérêt, puis nous choisissons ensemble la ville, le lieu et le format.",
+        "sevilla": "La précédente annonce concernait le 17 octobre 2026. La prochaine date n’est pas encore fixée. Pour une nouvelle rencontre, nous choisirons le lieu ensemble ; on peut rejoindre La Rinconada en train de banlieue.",
+        "torremolinos": "Une pinède dans le haut de Torremolinos : une destination à envisager pour une rencontre en pleine nature. Le lieu n’est pas encore réservé.",
+        "valencia": "Nos pique-niques ont déjà eu lieu à Valence. Manifestez votre intérêt pour une nouvelle rencontre : lieu, date et format seront choisis ensemble."
+      },
+      "invitation": "Invitez vos amis — Ukrainiens, Espagnols et tous ceux qui veulent faire connaissance et passer la journée ensemble.",
+      "joinAction": "Je veux participer",
+      "mapAction": "Voir le lieu sur la carte",
+      "memoryArchive": "Photos de l’album commun de nos rencontres :",
+      "memoryArchiveLabel": "Ouvrir l’album photo commun",
+      "memoryHeading": "Autour de la table commune",
+      "memoryIntro": "Nous nous sommes déjà retrouvés dans cette ville. De nouvelles rencontres, des saveurs maison et du temps ensemble : voilà ce pour quoi on a envie de se réunir à nouveau.",
+      "newLabel": "Nouvelle destination",
+      "pastLabel": "Nous nous y sommes déjà retrouvés",
+      "proposedVenue": "{venue} — lieu proposé, la date n’est pas encore fixée.",
+      "supportAction": "Soutenir cette destination"
+    },
+    "direction": {
+      "description": "Nous rassemblons les volontaires. Nous conviendrons ensemble de la date, du lieu et du budget à l’avance.",
+      "discussAction": "Discuter de cette destination",
+      "nextAction": "Autres destinations",
+      "pauseAction": "Mettre en pause le défilement",
+      "pill": "Quand le groupe sera constitué",
+      "resumeAction": "Reprendre le défilement"
+    },
+    "map": {
+      "addAction": "Proposer une rencontre",
+      "addContext": "Je veux une rencontre dans une nouvelle ville",
+      "addStatus": "Nouvelle destination",
+      "addTitle": "Votre ville +",
+      "cityPast": "Déjà retrouvés",
+      "cityPlanned": "Future destination",
+      "title": {
+        "andalucia": "Andalousie — plus près des nôtres",
+        "portugal": "Portugal — nouvelles destinations",
+        "spain": "L’Espagne et de nouvelles destinations"
+      }
+    },
+    "name": {
+      "alicante": "Alicante",
+      "almeria": "Almería",
+      "asturias": "Asturies",
+      "barcelona": "Barcelone",
+      "benalmadena": "Benalmádena",
+      "bilbao": "Bilbao",
+      "cadiz": "Cadix",
+      "chiclana": "Chiclana de la Frontera",
+      "coimbra": "Coimbra",
+      "cordoba": "Cordoue",
+      "coruna": "La Corogne",
+      "dos-hermanas": "Dos Hermanas",
+      "estepona": "Estepona",
+      "faro": "Faro",
+      "fuengirola": "Fuengirola",
+      "granada": "Grenade",
+      "huelva": "Huelva",
+      "jaen": "Jaén",
+      "jerez": "Jerez",
+      "leon": "León",
+      "lisbon": "Lisbonne",
+      "madrid": "Madrid",
+      "malaga": "Malaga",
+      "marbella": "Marbella",
+      "nerja": "Nerja",
+      "pamplona": "Pampelune",
+      "porto": "Porto",
+      "portugal": "Portugal",
+      "rinconada": "La Rinconada",
+      "ronda": "Ronda",
+      "san-pedro": "San Pedro",
+      "santander": "Santander",
+      "santiago": "Saint-Jacques-de-Compostelle",
+      "sevilla": "Séville",
+      "tarifa": "Tarifa",
+      "torremolinos": "Torremolinos",
+      "valencia": "Valence",
+      "vigo": "Vigo",
+      "zaragoza": "Saragosse"
+    },
+    "venue": {
+      "fuengirola": "Parc naturel de Fuengirola",
+      "san-pedro": "Espace aménagé et ombragé"
+    },
+    "voteContext": "Future rencontre : {city}"
+  },
+  "contact": {
+    "message": {
+      "contextPlaceholder": "Votre demande concernant « {context} »",
+      "defaultPlaceholder": "Décrivez votre proposition ou votre question : ainsi, l’organisateur comprendra tout de suite comment il peut aider.",
+      "detailsLabel": "Détails ou questions",
+      "joinPlaceholder": "Particularités alimentaires, âge des enfants, transport ou votre question",
+      "suggestionLabel": "Que proposez-vous ou souhaitez-vous communiquer exactement *"
+    },
+    "method": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "telegram": "Telegram",
+      "telegramPlaceholder": "Téléphone ou pseudo sans @"
+    },
+    "purpose": {
+      "feedback": "Avis / suggestions",
+      "help": "Aide aux organisateurs",
+      "join": "Participation à la rencontre",
+      "media": "Soutien médiatique",
+      "menu": "Menu et alimentation",
+      "privacy": "Question sur mes données",
+      "question": "Autre question",
+      "support": "Partenariat / parrainage",
+      "talent": "Talent ou activité"
+    },
+    "title": {
+      "feedback": "Vos impressions comptent.",
+      "help": "Préparons la rencontre ensemble.",
+      "join": "À bientôt autour de la table commune.",
+      "media": "Parlons de nos rencontres.",
+      "menu": "Vos souhaits pour le menu.",
+      "privacy": "Une question sur vos données.",
+      "question": "Que voulez-vous demander ?",
+      "support": "Soutenons la communauté.",
+      "talent": "Partagez votre talent."
+    },
+    "validation": {
+      "city": "Indiquez la ville ou la région.",
+      "message": "Ajoutez quelques mots sur votre proposition ou votre souhait.",
+      "method": "Vérifiez le contact pour le mode de communication choisi.",
+      "name": "Indiquez votre prénom, au moins deux lettres."
+    }
+  },
+  "dish": {
+    "arrangementsHeading": "Ce que l’on peut convenir",
+    "contactAction": "Préciser la composition ou vos souhaits",
+    "contactContext": "Plat : {dish}",
+    "dietaryInstructions": "Écrivez-nous à l’avance : nous préciserons la composition et les options possibles.",
+    "dietaryQuestion": "Une allergie ou un régime particulier ?",
+    "mainMenuNote": "Nous cuisinons selon le nombre de participants. Le menu définitif est convenu pour chaque rencontre.",
+    "menu": {
+      "borscht": {
+        "description": "Un bortsch ukrainien bien chaud : un plat maison pour lequel on a envie de se réunir autour d’une même table, même loin de chez soi.",
+        "name": "Bortsch ukrainien",
+        "preparation": "Nous préparons une partie des légumes à l’avance, puis nous terminons la cuisson et servons pendant la rencontre. Les quantités sont calculées selon les participants.",
+        "wishes": "Précisez le bouillon, la présence de viande et le service avec de la crème aigre avant de confirmer votre participation. Les souhaits pour une version maigre doivent être convenus à l’avance."
+      },
+      "canapes": {
+        "description": "De petits canapés à l’esprit espagnol : un amuse-bouche supplémentaire, pratique pour grignoter en faisant connaissance et en discutant.",
+        "name": "Canapés espagnols",
+        "preparation": "Nous convenons à l’avance de la base, des garnitures et de la quantité. Les ingrédients sont préparés séparément, et la façon de les assembler dépend du lieu et de l’heure de service.",
+        "wishes": "Vous pouvez proposer une version aux légumes, au fromage ou autre. La composition et les substitutions possibles sont convenues avant l’achat des produits."
+      },
+      "chicken": {
+        "description": "Nous préparons le chachlik de poulet pour la table commune : des morceaux de viande en portions, l’arôme du barbecue et un service dès la cuisson.",
+        "name": "Chachlik de poulet",
+        "preparation": "Nous achetons le poulet selon le nombre de participants confirmé, le marinons et le conditionnons à l’avance. Sur place, nous grillons par fournées pour servir chaud.",
+        "wishes": "Écrivez-nous si vous voulez une portion moins épicée ou si la composition de la marinade compte pour vous. Une version sans certaines épices est convenue avant la préparation."
+      },
+      "mainLabel": "Repère du menu de base",
+      "okroshka": {
+        "description": "La okrochka, fraîche, complète les plats chauds et convient particulièrement bien à une journée chaude en pleine nature.",
+        "name": "Okrochka",
+        "preparation": "Nous préparons les ingrédients à l’avance, les transportons au frais et les assemblons pour le service. La base et la garniture sont définies pour chaque rencontre.",
+        "wishes": "Précisez la base, la présence de produits laitiers, d’œufs et d’ingrédients carnés si cela compte pour votre alimentation."
+      },
+      "olives": {
+        "description": "Les olives sont un petit détail espagnol de notre table commune. Un amuse-bouche idéal avec les légumes, la viande et les conversations entre deux services.",
+        "name": "Olives",
+        "preparation": "Nous les choisissons et les achetons avec les autres produits, puis les disposons sur place pour un service commun.",
+        "wishes": "La variété, la marinade, les noyaux ou la garniture dépendent de l’achat. Si la composition est importante pour vous, précisez-la avant la rencontre."
+      },
+      "optionalLabel": "Menu supplémentaire · sur accord",
+      "pelmeni": {
+        "description": "Des pelmeni faits maison : une option copieuse en plus pour ceux qui veulent élargir le menu de la table commune.",
+        "name": "Pelmeni",
+        "preparation": "Nous convenons à l’avance de la farce, de la préparation, du conditionnement et du nombre de portions. Nous ajoutons ce plat quand il y a assez de volontaires et un budget convenu.",
+        "wishes": "Le type de viande, la composition de la pâte et le service sont précisés séparément. Signalez vos restrictions alimentaires avant le début de la préparation."
+      },
+      "pork": {
+        "description": "Le chachlik de porc est le plat principal chaud du barbecue. Nous le servons à la table commune avec des légumes et des amuse-bouche convenus.",
+        "name": "Chachlik de porc",
+        "preparation": "Nous découpons et marinons la viande avant le départ, prévoyons le nombre de portions et la transportons au frais. Nous grillons sur place, quand le groupe se rassemble.",
+        "wishes": "Si vous ne mangez pas de porc, prévenez-nous à l’avance : nous tiendrons compte du choix du poulet ou discuterons d’une autre option avant les achats."
+      },
+      "potatoes": {
+        "description": "Des pommes de terre sautées, dorées, à l’aneth : un accompagnement copieux pour la table principale, facile à partager en grand groupe.",
+        "name": "Pommes de terre à l’ukrainienne",
+        "preparation": "Nous prévoyons à l’avance la quantité et la vaisselle nécessaire. La cuisson sur place dépend de l’équipement et de l’ordre de service convenu.",
+        "wishes": "Précisez le mode de cuisson, les épices et les accompagnements. Une portion sans certains ingrédients est à discuter avant la rencontre."
+      },
+      "salad": {
+        "description": "Des salades de légumes frais : un accompagnement léger pour le chachlik et les autres plats. Tomates, concombres et légumes de saison rendent la table plus variée.",
+        "name": "Salades de légumes",
+        "preparation": "Nous achetons les légumes selon le groupe ; la découpe et l’assaisonnement sont prévus au plus près du service. Les combinaisons exactes dépendent du menu convenu.",
+        "wishes": "Vous pouvez demander à l’avance l’assaisonnement à part ou vous renseigner sur une portion sans certain ingrédient."
+      },
+      "savory-crepes": {
+        "description": "Des crêpes salées avec une garniture convenue : une autre option maison pour un menu élargi.",
+        "name": "Crêpes salées",
+        "preparation": "Nous préparons séparément les crêpes et la garniture, formons les portions et les emballons pour le transport. Le volume de préparation est pris en compte dans le budget supplémentaire.",
+        "wishes": "Une garniture à la viande ou autre doit être proposée à l’avance. Les substitutions possibles dépendent du menu convenu."
+      },
+      "sweet-crepes": {
+        "description": "Des crêpes sucrées : un dessert maison pour conclure le repas commun. Confiture ou lait concentré peuvent être convenus en supplément.",
+        "name": "Crêpes sucrées",
+        "preparation": "Nous prévoyons la pâte, la cuisson et le conditionnement selon le nombre de personnes. Les garnitures et le mode de service sont choisis avant les achats.",
+        "wishes": "Dites-nous quelle garniture vous aimez et combien de portions vous voudriez. Nous préciserons la composition de la pâte et des suppléments avant la confirmation."
+      },
+      "varenyky": {
+        "description": "Les varenyky peuvent être ajoutés au menu si le groupe veut un plat maison de plus. Nous convenons ensemble de la garniture et de la quantité.",
+        "name": "Varenyky",
+        "preparation": "La préparation de la pâte et de la garniture, le façonnage et le conditionnement demandent du temps. C’est pourquoi nous prévoyons cet ajout avant les achats principaux.",
+        "wishes": "Proposez une garniture, un nombre de portions et vos souhaits pour le service. La crème aigre et les autres accompagnements sont discutés séparément."
+      }
+    },
+    "optionalMenuNote": "Nous convenons de la garniture, du nombre de portions et du budget supplémentaire avant les achats.",
+    "preparationHeading": "Comment nous cuisinons"
+  },
+  "gallery": {
+    "counter": "Photo {current} sur {total}",
+    "failed": "La photo n’a pas pu se charger. Réessayez ou passez à la suivante.",
+    "loading": "Chargement de la photo…",
+    "photo": {
+      "archive-autumn": {
+        "alt": "Groupe de participants au pique-nique avec des drapeaux ukrainiens",
+        "caption": "Des souvenirs qui restent"
+      },
+      "archive-beach": {
+        "alt": "Un groupe d’amis ukrainiens à la plage",
+        "caption": "Un week-end au bord de la mer"
+      },
+      "archive-big": {
+        "alt": "Grande rencontre d’Ukrainiens en pleine nature",
+        "caption": "Quand un groupe devient une communauté"
+      },
+      "archive-family": {
+        "alt": "Adultes et enfants réunis lors d’une rencontre d’Ukrainiens",
+        "caption": "Entre amis et en famille"
+      },
+      "archive-forest": {
+        "alt": "Participants à la rencontre dans un parc, avec des drapeaux ukrainiens et des ballons",
+        "caption": "Les nôtres, en pleine nature"
+      },
+      "archive-tents": {
+        "alt": "Rencontre en famille sous des tentes blanches avec des ballons jaune et bleu",
+        "caption": "Un lieu où chacun est bienvenu"
+      },
+      "img-4325": {
+        "alt": "Vraie photo de chachlik sur le barbecue pendant une rencontre",
+        "caption": "Le chachlik, un prétexte"
+      },
+      "img-8336": {
+        "alt": "Image tirée d’une vidéo : conversations et table commune sous une tente blanche",
+        "caption": "Autour d’une grande table"
+      }
+    },
+    "scene": {
+      "park": "Ensemble au parc",
+      "sea": "Rencontre au bord de la mer",
+      "table": "Rencontre autour de la table commune",
+      "waterfront": "Soirée sur le quai"
+    }
+  },
+  "hero": {
+    "pause": "Arrêter le défilement automatique des diapositives",
+    "play": "Activer le défilement automatique des diapositives"
+  },
+  "image": {
+    "loadError": "Impossible de charger l’image"
+  },
+  "information": {
+    "detailsEyebrow": "Les détails qui simplifient la rencontre",
+    "drinks": {
+      "cta": "Préciser quoi apporter",
+      "item": {
+        "1": "Assez d’eau potable pour toute la journée.",
+        "2": "Ce que vous et vos enfants aimez boire.",
+        "3": "Une gourde ou une tasse isotherme si vous le souhaitez.",
+        "4": "Vos médicaments personnels, une protection solaire et une couche chaude pour la soirée."
+      },
+      "text": "L’eau et toutes les boissons ne sont pas comprises dans la participation commune. Préparez-les pour vous et votre famille : nous ne vendons pas de boissons sur place.",
+      "title": "Vos boissons préférées : apportez-les."
+    },
+    "first": {
+      "cta": "Je veux faire connaissance",
+      "item": {
+        "1": "Indiquez à l’avance le nombre d’adultes et d’enfants.",
+        "2": "Convenez du menu, de la participation aux frais et du point de rendez-vous.",
+        "3": "Apportez de l’eau, des boissons et vos affaires personnelles.",
+        "4": "Sur place, allez voir l’organisateur : nous vous aiderons à faire connaissance."
+      },
+      "text": "Vous pouvez venir seul(e), en famille ou entre amis. Invitez aussi vos amis espagnols : nous faisons connaissance et partageons la culture ukrainienne.",
+      "title": "Venez, même si c’est votre première fois."
+    },
+    "help": {
+      "cta": "Je peux aider",
+      "item": {
+        "1": "Achats et préparation des produits.",
+        "2": "Transport, déchargement, installation des abris.",
+        "3": "Mettre la table, aider en cuisine, accueillir les nouveaux.",
+        "4": "Monter le matériel et ranger après le pique-nique."
+      },
+      "text": "Aider ne veut pas forcément dire toute la journée. Même une petite tâche précise allège une partie de la charge des organisateurs.",
+      "title": "Faisons de cette journée un moment partagé."
+    },
+    "support": {
+      "cta": "Proposer un soutien",
+      "item": {
+        "1": "Produits, matériel ou transport.",
+        "2": "Un lieu ou la prise en charge d’une dépense précise.",
+        "3": "Soutien d’information, photos et vidéos.",
+        "4": "Musique, atelier ou autre activité commune."
+      },
+      "text": "Ce format repose sur le partage des frais et le travail des organisateurs. Nous voulons garder une participation accessible, c’est pourquoi nous sommes ouverts à différentes formes de soutien.",
+      "title": "Un soutien qui devient une journée partagée."
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": {
+        "1": "Quelles données vous transmettez",
+        "2": "À quoi elles servent",
+        "3": "Services externes"
+      },
+      "text": {
+        "1": "La page prépare le texte de la demande avec le prénom, la ville, le contact, le nombre de participants et vos souhaits. Elle n’envoie pas le formulaire dans une base de données propre : le message n’est transmis à l’organisateur qu’après votre action dans Telegram ou dans l’application de messagerie. N’ajoutez ni documents ni diagnostics médicaux ; pour l’alimentation, il suffit d’indiquer les aliments à éviter.",
+        "2": "La demande sert à répondre et à convenir de la participation. Le consentement aux nouvelles des prochaines rencontres et à la publication d’un avis est distinct et facultatif. Vous pouvez retirer votre consentement et demander l’accès, la rectification ou la suppression de vos données via l’organisateur. Vous pouvez aussi vous adresser à l’AEPD.",
+        "3": "Telegram, la messagerie et l’hébergeur traitent les données selon leurs propres règles, y compris les données techniques de connexion. Avant de continuer, consultez leurs politiques. Le code de cette page ne comporte aucun profilage publicitaire."
+      }
+    },
+    "cookies": {
+      "title": {
+        "1": "Vos paramètres",
+        "2": "Services externes",
+        "3": "Votre choix"
+      },
+      "text": {
+        "1": "La page enregistre le choix du thème dans localStorage sous la clé picnic-theme. C’est un réglage d’affichage sur votre appareil ; vous pouvez le supprimer dans les paramètres du navigateur. La prise de connaissance de cet avis n’est conservée que jusqu’à la fermeture de l’onglet.",
+        "2": "Le code propre de la page n’installe ni outil d’analyse ni traceur publicitaire. La navigation privée peut recourir à des mécanismes techniques de l’hébergeur. Les sites externes ne s’ouvrent que via un lien et ont leurs propres règles.",
+        "3": "Si des traceurs facultatifs sont ajoutés, ils ne doivent pas être lancés avant le choix de l’utilisateur. L’acceptation et le refus doivent être aussi accessibles l’un que l’autre."
+      }
+    },
+    "terms": {
+      "title": {
+        "1": "Confirmation de la participation",
+        "2": "Pendant la rencontre",
+        "3": "Photos et respect",
+        "4": "Vos droits"
+      },
+      "text": {
+        "1": "Il s’agit d’une page d’information de la communauté. Une demande ou le compte à rebours ne confirme pas la participation. La date, le lieu, le menu, la participation aux frais, les modalités de paiement, les modifications et les remboursements sont convenus avec l’organisateur avant tout virement.",
+        "2": "Chacun apporte ses boissons. Les enfants restent sous la surveillance des adultes qui les accompagnent. Respectez les règles du lieu, les restrictions sur le feu et les conditions convenues pour la rencontre.",
+        "3": "Respectez les autres participants et ne publiez pas leurs données personnelles ni leurs portraits sans autorisation. Prévenez l’organisateur si vous ne souhaitez pas apparaître sur les photos ou demandez la suppression d’une image.",
+        "4": "Ces conditions ne limitent pas les droits conférés par la loi."
+      }
+    }
+  },
+  "page": {
+    "date": "28 novembre 2026 · 11:00",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies et paramètres",
+    "terms": "Conditions de participation",
+    "close": "Fermer",
+    "nav": "Navigation",
+    "event": "Nous prévoyons provisoirement une rencontre le 28 novembre 2026 à 11:00, heure d’Espagne. Le lieu, le menu et la participation aux frais restent à convenir. Le compte à rebours indique le temps restant jusqu’à la date provisoire et ne confirme pas l’événement.",
+    "notice": "Ce site utilise le stockage local pour mémoriser le thème choisi. Le code de la page ne contient aucun traceur publicitaire ou d’analyse.",
+    "ok": "Compris"
+  },
+  "photoStory": {
+    "1": "Ici, il est facile d’engager la conversation : une journée partagée, des saveurs familières et des gens que l’on a envie de revoir.",
+    "2": "De petits moments d’un grand groupe. Ces rencontres sont l’occasion de poser les soucis du quotidien et d’être ensemble.",
+    "3": "Inutile de connaître tout le monde à l’avance. Les rencontres commencent souvent par un simple bonjour autour de la table commune."
+  },
+  "request": {
+    "availability": "Quand cela me convient : {value}",
+    "city": "Ville / région : {city}.",
+    "contact": "Contact ({method}) : {contact}.",
+    "context": "Rencontre / sujet : {context}.",
+    "contribution": "Mon aide : {value}",
+    "copy": {
+      "button": "Copier la demande",
+      "failure": "Le navigateur n’a pas autorisé la copie. Sélectionnez et copiez le texte ci-dessous.",
+      "manualLabel": "Texte de la demande à copier manuellement",
+      "success": "Le texte a été copié dans le presse-papiers. Vous pouvez le coller dans une autre messagerie et écrire à l’organisateur."
+    },
+    "details": "Détails : {details}",
+    "diet": "Préférences alimentaires : {value}",
+    "email": "E-mail : {email}",
+    "futureUpdates": "Informations sur les prochaines rencontres : {answer}.",
+    "greeting": "Bonjour ! {purpose}.",
+    "name": "Prénom : {name}.",
+    "no": "non",
+    "participants": "Adultes : {adults} ; enfants : {children}.",
+    "replyConsent": "Consentement à une réponse concernant cette demande : oui.",
+    "reviewPermission": "Autorisation de publier l’avis et le prénom : {answer}",
+    "telegram": {
+      "openAgain": "Rouvrir Telegram",
+      "opening": "Ouverture de Telegram.",
+      "sendHint": "Appuyez sur « Envoyer » dans le chat de l’organisateur. Si Telegram n’est pas disponible, utilisez la copie du texte dans une autre messagerie."
+    },
+    "transport": "Transport : {value}",
+    "yes": "oui"
+  },
+  "theme": {
+    "toNight": "Activer le thème sombre",
+    "toDay": "Activer le thème clair"
+  },
+  "venueGallery": {
+    "close": "Fermer",
+    "dialogLabel": "Photos du parc et du pique-nique",
+    "next": "Photo suivante",
+    "previous": "Photo précédente"
+  },
+  "vote": {
+    "initialStatus": "Choisissez une ville et un format qui vous conviennent, puis envoyez vos souhaits à l’organisateur.",
+    "requestContext": "Souhaits pour une future rencontre : {preferences}"
+  }
+}

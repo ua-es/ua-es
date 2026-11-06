@@ -7,6 +7,7 @@
 //
 // Strategy:
 //   - HTML pages: src/html/page.html + src/content/<lang>.json → one page per language
+//     (the language list lives in src/languages.json; sitemap.xml is generated too)
 //   - Shared JS (same on all pages)  → js/shared.js
 //   - Shared page JS                 → js/app.js
 //   - CSS stays as two separate files (index.min.css + readability.min.css)
@@ -15,9 +16,10 @@
 // ============================================================
 
 import * as esbuild from "esbuild";
-import { readFile, writeFile, watch } from "node:fs/promises";
+import { mkdir, readFile, writeFile, watch } from "node:fs/promises";
+import { dirname } from "node:path";
 import { readdirSync } from "node:fs";
-import { renderPage } from "./tools/render-page.js";
+import { languageVariables, renderPage, renderSitemap } from "./tools/render-page.js";
 
 const isWatch = process.argv.includes("--watch");
 
@@ -26,7 +28,7 @@ const isWatch = process.argv.includes("--watch");
 const MAX_BUNDLE_KB = 200;
 
 function checkBundleSize(out, code) {
-  const kb = code.length / 1024;
+  const kb = Buffer.byteLength(code, "utf8") / 1024;
   if (kb > MAX_BUNDLE_KB) {
     console.warn(
       `  WARNING: ${out} exceeds budget: ${kb.toFixed(1)} KB (limit ${MAX_BUNDLE_KB} KB)`
@@ -59,7 +61,9 @@ const jsBundles = [
   },
 ];
 
-const localeBundles = ["uk", "en", "es"].map((locale) => ({
+const languageSettings = JSON.parse(await readFile("src/languages.json", "utf8"));
+
+const localeBundles = languageSettings.languages.map(({ code: locale }) => ({
   locale,
   src: `src/locales/${locale}.json`,
   out: `js/locale-${locale}.js`,
@@ -67,11 +71,10 @@ const localeBundles = ["uk", "en", "es"].map((locale) => ({
 
 // ── HTML pages definition ──────────────────────────────────────────────────
 
-const pages = [
-  { locale: "uk", out: "index.html" },
-  { locale: "en", out: "en/index.html" },
-  { locale: "es", out: "es/index.html" },
-];
+const pages = languageSettings.languages.map(({ code, path }) => ({
+  locale: code,
+  out: `${path}index.html`,
+}));
 
 // ── CSS bundles definition ─────────────────────────────────────────────────
 
@@ -139,7 +142,9 @@ async function buildLocaleBundle({ src, out }) {
 
 async function buildPage({ locale, out }, template) {
   const content = JSON.parse(await readFile(`src/content/${locale}.json`, "utf8"));
-  await writeFile(out, renderPage(template, content, locale), "utf8");
+  const computed = languageVariables(languageSettings, locale);
+  await mkdir(dirname(out), { recursive: true });
+  await writeFile(out, renderPage(template, content, locale, computed), "utf8");
   console.log(`  ✓ ${out.padEnd(28)} (${locale})`);
 }
 
@@ -148,6 +153,7 @@ async function buildAll() {
   const template = await readFile("src/html/page.html", "utf8");
   await Promise.all([
     ...pages.map((page) => buildPage(page, template)),
+    writeFile("sitemap.xml", renderSitemap(languageSettings), "utf8"),
     ...jsBundles.map((b) => buildBundle(b)),
     ...localeBundles.map((bundle) => buildLocaleBundle(bundle)),
     ...cssBundles.map((b) => buildBundle({ ...b, loader: "css" })),

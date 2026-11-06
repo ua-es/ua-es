@@ -1,88 +1,96 @@
 # Тепла зустріч
 
-Сайт спільноти українців та друзів в Іспанії: формат зустрічей, меню, найближча подія, допомога та співпраця. Сайт доступний трьома мовами: українською, іспанською та англійською.
+Website of a community of Ukrainians and friends in Spain: meeting format, menu, the next event, ways to help and cooperate. The site is available in five languages: Ukrainian, Spanish, English, Russian and French.
 
-**Сайт:** <https://ua-es.github.io/ua-es/>
-**Текст про спільноту:** [docs/about-community.txt](docs/about-community.txt)
+**Website:** <https://ua-es.github.io/ua-es/>
+**About the community and how to join (in Ukrainian):** [CONTRIBUTING.md](CONTRIBUTING.md)
 
-> Репозиторій відкритий для перегляду. Копіювати й використовувати код, дизайн, тексти та фото без письмової згоди не можна, докладніше в розділі [Ліцензія](#ліцензія).
+> The repository is open for viewing only. Copying or using the code, design, texts and photos without written permission is not allowed; see [License](#license).
 
-## Що всередині
+## What is inside
 
-Це статичний сайт без бекенда та фреймворків: HTML, CSS і ванільний JavaScript. Збирання робить [esbuild](https://esbuild.github.io/), перевірки Playwright і вбудований тестовий раннер Node.js, публікація через GitHub Pages.
+A static site with no backend and no frameworks: HTML, CSS and vanilla JavaScript. [esbuild](https://esbuild.github.io/) builds the bundles, Playwright and the built-in Node.js test runner run the checks, and GitHub Pages publishes the result.
 
-- Три мови з єдиним каталогом перекладів і тестом, що ключі збігаються.
-- Контактна форма не зберігає дані: вона готує текст і відкриває Telegram або пошту.
-- Світла й темна теми, зображення у форматі WebP зі `srcset` для адаптивних розмірів, доступність (skip-link, ARIA, `prefers-reduced-motion`).
-- CI: тести перед кожною публікацією, бюджет розміру бандла.
+- Five languages with one translation catalog per language and a test that the keys match.
+- The contact form stores nothing: it prepares a message and opens Telegram or email.
+- Light and dark themes, WebP images with `srcset` for responsive sizes, accessibility (skip link, ARIA, `prefers-reduced-motion`).
+- CI: tests before every deployment and a bundle size budget.
 
-## Структура
+## Structure
 
 ```text
 .
 ├── src/
-│   ├── html/           page.html — єдиний шаблон сторінки
-│   ├── content/        тексти сторінки: uk.json, en.json, es.json
-│   ├── css/            style/ (12 нумерованих частин стилів), readability.css
-│   ├── js/             модулі інтерфейсу: галереї, форма, тема, мова, зображення
-│   └── locales/        переклади: uk.json, en.json, es.json
-├── index.html, en/, es/  згенеровані сторінки (не редагувати вручну)
-├── tools/              допоміжні модулі збирання
-├── css/  js/           згенеровані файли (не редагувати вручну)
-├── assets/             шрифти, іконки, візерунки, відео, прев'ю для соцмереж
-├── images/             фотографії та ілюстрації (WebP)
-├── tests/              юніт-тести та e2e (Playwright)
-├── build.js            збирання бандлів
-├── docs/               додаткова документація
-└── .github/workflows/  перевірки якості та публікація
+│   ├── languages.json  site languages (code, label, path)
+│   ├── html/           page.html, the single page template
+│   ├── content/        page copy: uk, en, es, ru, fr (*.json)
+│   ├── css/            style/ (13 numbered parts), readability.css
+│   ├── js/             interface modules: galleries, form, theme, language, images
+│   └── locales/        runtime UI strings: uk, en, es, ru, fr (*.json)
+├── index.html, en/, es/, ru/, fr/  generated pages (do not edit by hand)
+├── tools/              build helpers
+├── css/  js/           generated files (do not edit by hand)
+├── assets/             fonts, icons, patterns, video, social preview
+├── images/             photographs and illustrations (WebP)
+├── tests/              unit and e2e (Playwright) tests
+├── build.js            bundle build
+├── docs/               additional documentation
+└── .github/workflows/  quality checks and deployment
 ```
 
-Як з вихідних файлів виходить готовий сайт:
+How the source files become the finished site:
 
 ```mermaid
 flowchart LR
   A[src/js] -->|esbuild| B[js/shared.js, js/app.js]
-  C[src/locales/*.json] -->|esbuild| D[js/locale-uk/en/es.js]
+  C[src/locales/*.json] -->|esbuild| D[js/locale-LANG.js]
   H[src/html + src/content] -->|render-page| G
   E[src/css] -->|esbuild| F[css/*.min.css]
-  B --> G[HTML сторінки]
+  B --> G[HTML pages]
   D --> G
   F --> G
 ```
 
-## Хто за що відповідає
+## Who works where
 
-| Роль | Де працювати | Що перевірити |
+| Role | Where to work | What to check |
 | --- | --- | --- |
-| Дизайнер | `src/css/`, `assets/` (іконки, візерунки, логотипи), `images/` | вигляд у світлій і темній темі, мобільна версія |
-| Перекладач і редактор | `src/content/*.json` (текст сторінки), `src/locales/*.json` (текст інтерфейсу) | ключі однакові в усіх трьох мовах (`npm run test:unit`) |
-| Розробник | `src/js/`, `src/html/page.html`, `build.js` | `make check` |
-| Організатор | дата, місце й меню зустрічі в `src/content/` | сторінки всіх трьох мов |
+| Designer | `src/css/`, `assets/` (icons, patterns, logos), `images/` | light and dark themes, mobile layout |
+| Translator and editor | `src/content/*.json` (page copy), `src/locales/*.json` (UI strings) | keys are identical in all five languages (`npm run test:unit`) |
+| Developer | `src/js/`, `src/html/page.html`, `build.js` | `make check` |
+| Organizer | meeting date, place and menu in `src/content/` | pages in all five languages |
 
-## Швидкий старт
+## Quick start
 
-Потрібні Node.js 22+ і Python 3.
+Requires Node.js 22+ and Python 3.
 
 ```sh
 npm ci
-make dev        # збирання, стеження за src/ і сервер на http://localhost:8000/
+make dev        # build, watch src/ and serve at http://localhost:8000/
 ```
 
-Перевірки (один раз встановіть браузер: `npx playwright install chromium`):
+Checks (install the browser once with `npx playwright install chromium`):
 
 ```sh
-make check      # юніт-тести та e2e
-make format     # форматування Prettier
+make check      # unit tests and e2e
+make format     # Prettier formatting
 ```
 
-Усі команди й подробиці: [DEVELOPMENT.md](DEVELOPMENT.md). Як усе влаштоване: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+All commands and details: [DEVELOPMENT.md](DEVELOPMENT.md). How everything fits together: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-## Публікація
+## Adding a language
 
-Після успішних «Quality checks» на гілці `main` workflow `deploy.yml` збирає сайт і публікує його на GitHub Pages. Публікуються лише файли сайту.
+1. Copy `src/content/uk.json` and `src/locales/uk.json` to `<code>.json` and translate the values (keep keys, `{placeholders}` and links).
+2. Add `{ "code": "<code>", "label": "<LABEL>", "path": "<code>/" }` to `src/languages.json`.
+3. Run `npm run build` and `npm test`: the page, `hreflang` links, language switcher and `sitemap.xml` are generated automatically.
+4. Add the expected strings of the new language to the `languages` array in `tests/e2e/site.spec.js`.
 
-## Ліцензія
+## Deployment
 
-© 2026 Тепла зустріч. Усі права захищено.
+After a successful "Quality checks" run on `main`, the `deploy.yml` workflow builds the site and publishes it to GitHub Pages. Only the site files are published.
 
-Код і матеріали можна переглядати, але не можна копіювати, змінювати, поширювати чи використовувати без письмової згоди. Усі фотографії належать їхнім авторам, права захищено. Текст: [LICENSE](LICENSE). Сторонні шрифти та залежності: [docs/third-party.md](docs/third-party.md). Щоб запросити дозвіл, напишіть організаторам через форму на сайті.
+## License
+
+© 2026 Тепла зустріч. All rights reserved.
+
+The code and materials may be viewed, but not copied, modified, distributed or used without written permission. All photographs belong to their authors and all rights are reserved. Text: [LICENSE](LICENSE). Third-party fonts and dependencies: [docs/third-party.md](docs/third-party.md). To ask for permission, write to the organizers through the contact form on the website.

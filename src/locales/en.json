@@ -328,6 +328,62 @@
       "title": "Support that brings us together."
     }
   },
+  "legal": {
+    "privacy": {
+      "title": {
+        "1": "Information you share",
+        "2": "How it is used",
+        "3": "External services"
+      },
+      "text": {
+        "1": "This page prepares an enquiry containing your name, city, contact details, party size and preferences. It does not submit the form to its own database: your message reaches the organiser only after your action in Telegram or your email app. Do not include documents or medical diagnoses; for food preferences, list ingredients to avoid.",
+        "2": "The enquiry is used to reply and arrange participation. Consent to future updates and publishing your feedback is separate and optional. You may withdraw consent and request access, correction or deletion through the organiser. You may also complain to the AEPD.",
+        "3": "Telegram, email and hosting providers process data under their own policies, including technical connection data. Read those policies before using their services. This page code contains no advertising profiling."
+      }
+    },
+    "cookies": {
+      "title": {
+        "1": "Your preferences",
+        "2": "External services",
+        "3": "Your choice"
+      },
+      "text": {
+        "1": "The page stores your theme choice in localStorage using the picnic-theme key. This is a display preference on your device and can be removed in browser settings. Dismissing this notice is remembered only until the tab closes.",
+        "2": "Our page code contains no advertising or analytics trackers. Signing into the private preview may use technical hosting mechanisms. External websites open only when you follow a link and have their own policies.",
+        "3": "If optional trackers are added later, they must not run before the user chooses. Accepting and refusing must be equally accessible."
+      }
+    },
+    "terms": {
+      "title": {
+        "1": "Confirming participation",
+        "2": "At the gathering",
+        "3": "Photos and respect",
+        "4": "Your rights"
+      },
+      "text": {
+        "1": "This is a community information page. An enquiry or countdown does not confirm participation. Agree the date, venue, menu, contribution, payment arrangements, changes and refunds with the organiser before transferring money.",
+        "2": "Bring your own drinks. Children remain under the supervision of accompanying adults. Follow the venue rules, fire restrictions and agreed event arrangements.",
+        "3": "Respect other participants and do not publish their personal data or identifiable portraits without appropriate permission. Tell the organiser if you do not wish to appear in photos or request removal of an image.",
+        "4": "These terms do not limit statutory rights."
+      }
+    }
+  },
+  "page": {
+    "date": "28 November 2026 · 11:00",
+    "privacy": "Privacy",
+    "cookies": "Cookies and preferences",
+    "terms": "Participation terms",
+    "close": "Close",
+    "nav": "Navigation",
+    "event": "We provisionally plan to meet on 28 November 2026 at 11:00 Spanish time. The venue, menu and contribution are still to be agreed. The countdown shows the provisional date and does not confirm the event.",
+    "notice": "This site stores your chosen theme locally. The page code contains no advertising or analytics trackers.",
+    "ok": "Understood"
+  },
+  "photoStory": {
+    "1": "It is easy to start a conversation here: a shared day, familiar flavours and people you would like to see again.",
+    "2": "Little moments with a big group. Gatherings are a chance to set everyday tasks aside and spend time together.",
+    "3": "You do not need to know everyone beforehand. New connections often begin with a simple hello around the table."
+  },
   "request": {
     "availability": "Preferred time: {value}",
     "city": "City / region: {city}.",
@@ -357,6 +413,10 @@
     },
     "transport": "Transport: {value}",
     "yes": "yes"
+  },
+  "theme": {
+    "toNight": "Switch to dark theme",
+    "toDay": "Switch to light theme"
   },
   "venueGallery": {
     "close": "Close",

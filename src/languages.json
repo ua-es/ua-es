@@ -1,0 +1,11 @@
+{
+  "siteUrl": "https://ua-es.github.io/ua-es/",
+  "defaultLanguage": "uk",
+  "languages": [
+    { "code": "uk", "label": "UA", "path": "" },
+    { "code": "es", "label": "ES", "path": "es/" },
+    { "code": "en", "label": "EN", "path": "en/" },
+    { "code": "ru", "label": "RU", "path": "ru/" },
+    { "code": "fr", "label": "FR", "path": "fr/" }
+  ]
+}

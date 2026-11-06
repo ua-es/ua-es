@@ -1,12 +1,12 @@
-## Що змінено
+## What changed
 
-## Чому
+## Why
 
-## Перевірка
+## Checks
 
-- [ ] `make check` проходить
-- [ ] Зміни в `src/` перебудовані (`make build`), згенеровані сторінки, `js/` і `css/` не правилися вручну
-- [ ] Ключі в `src/locales/*.json` та `src/content/*.json` збігаються в усіх трьох мовах
-- [ ] Сторінки перевірені у світлій і темній темі та на мобільному екрані
+- [ ] `make check` passes
+- [ ] Changes in `src/` are rebuilt (`make build`); generated pages, `js/` and `css/` were not edited by hand
+- [ ] Keys in `src/locales/*.json` and `src/content/*.json` match in every language from `src/languages.json`
+- [ ] Pages checked in light and dark themes and on a mobile screen
 
-Примітка: репозиторій має ліцензію «лише перегляд» ([LICENSE](../LICENSE)). Зміни приймаються за попередньою домовленістю з організаторами.
+Note: the repository uses a view-only license ([LICENSE](../LICENSE)). Changes are accepted by prior agreement with the organizers.

@@ -3,7 +3,9 @@ import { readdir, readFile } from "node:fs/promises";
 import { test } from "node:test";
 import vm from "node:vm";
 
-const localeCodes = ["uk", "en", "es"];
+const localeCodes = JSON.parse(
+  await readFile(new URL("../src/languages.json", import.meta.url), "utf8")
+).languages.map((language) => language.code);
 const archivePhotoIds = [
   "archive-forest",
   "archive-beach",

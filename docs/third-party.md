@@ -1,17 +1,17 @@
-# Сторонні компоненти
+# Third-party components
 
-Ліцензія проєкту ([LICENSE](../LICENSE)) не поширюється на сторонні шрифти та залежності. Вони використовуються на умовах власних ліцензій.
+The project license ([LICENSE](../LICENSE)) does not cover third-party fonts and dependencies. They are used under their own licenses.
 
-## Шрифти (SIL Open Font License 1.1)
+## Fonts (SIL Open Font License 1.1)
 
-| Шрифт | Файл | Авторські права | Повний текст ліцензії |
+| Font | File | Copyright | Full license text |
 | --- | --- | --- | --- |
 | Manrope | `assets/Manrope.woff2` | The Manrope Project Authors | [Manrope-OFL.txt](licenses/Manrope-OFL.txt) |
 | Cormorant Garamond | `assets/CormorantGaramond-Bold.woff2` | The Cormorant Project Authors | [CormorantGaramond-OFL.txt](licenses/CormorantGaramond-OFL.txt) |
 | Comforter | `assets/Comforter.woff2` | The Comforter Project Authors | [Comforter-OFL.txt](licenses/Comforter-OFL.txt) |
 
-Використання й поширення шрифтів регулює ліцензія OFL, а не ліцензія проєкту.
+Use and redistribution of the fonts are governed by the OFL, not by the project license.
 
-## Інструменти розробки
+## Development tools
 
-[esbuild](https://github.com/evanw/esbuild) (MIT), [Playwright](https://github.com/microsoft/playwright) (Apache-2.0), [Prettier](https://github.com/prettier/prettier) (MIT). Вони встановлюються через `npm ci` і в репозиторій не входять.
+[esbuild](https://github.com/evanw/esbuild) (MIT), [Playwright](https://github.com/microsoft/playwright) (Apache-2.0), [Prettier](https://github.com/prettier/prettier) (MIT). They are installed with `npm ci` and are not part of the repository.

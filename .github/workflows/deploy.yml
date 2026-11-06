@@ -48,7 +48,15 @@ jobs:
       - name: Collect site files
         run: |
           mkdir _site
-          cp -r index.html en es css js assets images robots.txt sitemap.xml _site/
+          cp -r index.html css js assets images robots.txt sitemap.xml _site/
+          node --input-type=module <<'NODE'
+          import { cpSync, readFileSync } from "node:fs";
+
+          const { languages } = JSON.parse(readFileSync("src/languages.json", "utf8"));
+          for (const { path } of languages) {
+            if (path) cpSync(path, `_site/${path}`, { recursive: true });
+          }
+          NODE
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

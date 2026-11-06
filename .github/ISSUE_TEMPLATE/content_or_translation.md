@@ -1,11 +1,11 @@
 ---
-name: Текст, переклад або фото
-about: Помилка в тексті, неточний переклад, ідея для нового міста чи формату
+name: Text, translation or photo
+about: A mistake in the text, an inaccurate translation, an idea for a new city or format
 labels: content
 ---
 
-**Сторінка та мова** (UA / ES / EN)
+**Page and language** (UA / ES / EN / RU / FR)
 
-**Що виправити або запропонувати**
+**What to fix or suggest**
 
-**Чому це краще**
+**Why it is better**

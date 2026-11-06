@@ -1,0 +1,62 @@
+/*
+ * Botanical branches on the section edges.
+ *
+ * Earlier parts position the branches with per-section offsets, so on some
+ * screens a branch reaches into the text column. This last part replaces that
+ * with one rule: only --branch-visible px of a branch show beside the page
+ * edge, and the text column on that side always starts further in than that
+ * (the container gets extra padding when the screen margin is too narrow).
+ */
+main {
+  --branch-visible: clamp(40px, 6.5vw, 100px);
+  --branch-width: clamp(220px, 22vw, 320px);
+  --branch-gap: 14px;
+  /* Space between the screen edge and the text column (see .container). */
+  --page-margin: max(5vw, calc((100vw - 1280px) / 2));
+  --branch-padding: max(0px, calc(var(--branch-visible) + var(--branch-gap) - var(--page-margin)));
+}
+html main :is(#format, #organization, #menu, #help, #history, #future) > .edge-branch {
+  position: absolute;
+  width: var(--branch-width);
+  max-width: none;
+  height: auto;
+  top: -40px;
+  bottom: auto;
+  z-index: 0;
+}
+html main :is(#format, #organization, #menu, #help, #history, #future) > .edge-branch.branch-left {
+  left: calc(var(--branch-visible) - var(--branch-width));
+  right: auto;
+}
+html main :is(#format, #organization, #menu, #help, #history, #future) > .edge-branch.branch-right {
+  right: calc(var(--branch-visible) - var(--branch-width));
+  left: auto;
+}
+html
+  main
+  :is(#format, #organization, #menu, #help, #history, #future)
+  > .edge-branch.branch-bottom {
+  top: auto;
+  bottom: -40px;
+}
+html main #organization > .edge-branch {
+  top: auto;
+  bottom: 20px;
+}
+html main #menu > .edge-branch {
+  top: 35%;
+}
+html
+  main
+  :is(#format, #organization, #menu, #help, #history, #future)
+  > .edge-branch.branch-left
+  ~ .container {
+  padding-left: var(--branch-padding);
+}
+html
+  main
+  :is(#format, #organization, #menu, #help, #history, #future)
+  > .edge-branch.branch-right
+  ~ .container {
+  padding-right: var(--branch-padding);
+}

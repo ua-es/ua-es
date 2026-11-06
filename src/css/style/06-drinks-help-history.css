@@ -268,11 +268,6 @@
   white-space: normal;
   text-align: center;
 }
-[data-theme="night"] .section .heading-art,
-[data-theme="night"] .section-art,
-[data-theme="night"] .giralda-landmark {
-  filter: brightness(1.55) saturate(0.8) drop-shadow(0 0 15px #cfe3ff22);
-}
 [data-theme="night"] .drinks {
   background: #e7bd4f;
   color: #153a6d;

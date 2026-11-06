@@ -1,17 +1,17 @@
 ---
-name: Помилка на сайті
-about: Щось працює не так або виглядає неправильно
+name: Site bug
+about: Something does not work or looks wrong
 labels: bug
 ---
 
-**Що сталося**
+**What happened**
 
-**Як відтворити**
+**How to reproduce**
 1.
 2.
 
-**Очікувана поведінка**
+**Expected behavior**
 
-**Пристрій, браузер і мова сайту** (наприклад: iPhone, Safari, UA)
+**Device, browser and site language** (for example: iPhone, Safari, UA)
 
-**Знімок екрана** (за можливості)
+**Screenshot** (if possible)

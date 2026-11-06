@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="{{head.lang}}" data-decoration="paused">
+<html lang="{{language.code}}" data-decoration="paused">
   <head>
-    <meta charset="utf-8">{{head.base}}
+    <meta charset="utf-8">{{language.base}}
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#174788">
     <title>{{head.title}}</title>
@@ -10,7 +10,7 @@
     <script>(()=>{const e=["auto","day","night"];let t="day";try{t=localStorage.getItem("picnic-theme")||"day"}catch{}function c(c){t=e.includes(c)?c:"day";const n=(new Date).getHours(),a="auto"===t?n>=7&&n<20?"day":"night":t;document.documentElement.dataset.theme=a,document.documentElement.style.colorScheme="night"===a?"dark":"light"}e.includes(t)||(t="day"),window.picnicTheme={get choice(){return t},set(e){c(e);try{localStorage.setItem("picnic-theme",t)}catch{}}},c(t),setInterval(()=>c(t),6e4),document.addEventListener("visibilitychange",()=>{document.hidden||c(t)})})();</script>
     <link rel="preload" href="assets/Manrope.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="css/index.min.css">
-    <script defer src="js/locale-{{head.lang}}.js"></script>
+    <script defer src="js/locale-{{language.code}}.js"></script>
     <script defer src="js/shared.js"></script>
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
@@ -18,17 +18,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:title" content="{{meta.og-title}}">
     <meta property="og:description" content="{{meta.og-description}}">
-    <meta property="og:image" content="https://ua-es.github.io/ua-es/assets/og.jpg">
+    <meta property="og:image" content="{{site.url}}assets/og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="{{meta.og-locale}}">
-    <link rel="canonical" href="{{head.canonical}}">
-    <link rel="alternate" hreflang="uk" href="https://ua-es.github.io/ua-es/">
-    <link rel="alternate" hreflang="es" href="https://ua-es.github.io/ua-es/es/">
-    <link rel="alternate" hreflang="en" href="https://ua-es.github.io/ua-es/en/">
-    <link rel="alternate" hreflang="x-default" href="https://ua-es.github.io/ua-es/">
-    <meta property="og:url" content="{{meta.og-url}}">
-    {{head.json-ld}}
+    <link rel="canonical" href="{{language.url}}">
+    {{language.alternates}}
+    <meta property="og:url" content="{{language.url}}">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Тепла зустріч","url":"{{site.url}}","inLanguage":{{language.codes-json}},"description":"{{meta.description}}"}</script>
     <link imagesizes="100vw" imagesrcset="images/archive-forest-640.webp 640w, images/archive-forest-960.webp 960w, images/archive-forest.webp 1280w" type="image/webp" as="image" rel="preload">
 
     <link rel="stylesheet" href="css/readability.min.css" data-readability="">
@@ -46,9 +43,7 @@
           </svg>
         </button>
         <label class="sr-only" for="language-choice">{{page.t3}}</label><select id="language-choice" aria-label="{{page.aria-label3}}">
-          {{language-choice.tag1}}UA</option>
-          {{language-choice.tag2}}ES</option>
-          {{language-choice.tag3}}EN</option></select><select aria-label="{{page.aria-label4}}" id="theme-choice" hidden tabindex="-1">
+          {{language.options}}</select><select aria-label="{{page.aria-label4}}" id="theme-choice" hidden tabindex="-1">
           <option value="day">{{theme-choice.t1}}</option>
           <option value="night">{{theme-choice.t2}}</option>
           <option value="auto">{{theme-choice.t3}}</option>
@@ -119,10 +114,10 @@
         <div class="container slider-controls">
           <button id="hero-prev" aria-label="{{top.aria-label5}}">←</button>
           <div class="slider-dots">
-            <button data-slide="0" aria-label="{{top.aria-label6}}" aria-current="true">{{top.space2}}<span></span>{{top.space3}}</button>
-            <button data-slide="1" aria-label="{{top.aria-label7}}" aria-current="false">{{top.space4}}<span></span>{{top.space5}}</button>
-            <button data-slide="2" aria-label="{{top.aria-label8}}" aria-current="false">{{top.space6}}<span></span>{{top.space7}}</button>
-            <button data-slide="3" aria-label="{{top.aria-label9}}" aria-current="false">{{top.space8}}<span></span>{{top.space9}}</button>
+            <button data-slide="0" aria-label="{{top.aria-label6}}" aria-current="true"><span></span></button>
+            <button data-slide="1" aria-label="{{top.aria-label7}}" aria-current="false"><span></span></button>
+            <button data-slide="2" aria-label="{{top.aria-label8}}" aria-current="false"><span></span></button>
+            <button data-slide="3" aria-label="{{top.aria-label9}}" aria-current="false"><span></span></button>
           </div>
           <button id="hero-next" aria-label="{{top.aria-label10}}">→</button>
           <button id="hero-pause" aria-label="{{top.aria-label11}}">Ⅱ</button>
@@ -146,11 +141,11 @@
           </article>
           <article data-reveal="">
             <h3>{{format.t8}}</h3>
-            <p>{{format.space1}}{{format.t9}} <strong>{{format.t10}}</strong> {{format.t11}}{{format.space2}}</p>
+            <p>{{format.t9}} <strong>{{format.t10}}</strong> {{format.t11}}</p>
           </article>
           <article data-reveal="">
             <h3>{{format.t12}}</h3>
-            <p>{{format.space3}}{{format.t13}} <strong>{{format.t14}}</strong>{{format.space4}}</p>
+            <p>{{format.t13}} <strong>{{format.t14}}</strong></p>
           </article>
         </div>
         <div class="container format-connect">
@@ -200,7 +195,7 @@
             </figure>
             <div class="organization-promise" data-reveal="">
               <h3>{{organization.t6}}<br>{{organization.t7}}<br>{{organization.t8}}</h3>
-              <p>{{organization.space1}}{{organization.t9}} <strong>{{organization.t10}}</strong> {{organization.t11}}{{organization.space2}}</p>
+              <p>{{organization.t9}} <strong>{{organization.t10}}</strong> {{organization.t11}}</p>
               <p><strong>{{organization.t12}}</strong> {{organization.t13}}</p>
             </div>
           </div>
@@ -272,12 +267,12 @@
                 <button type="button" class="venue-photo" aria-label="{{event.aria-label3}}">
                   <img src="images/park-picnic.webp" alt="{{event.alt2}}" width="810" height="1440" loading="lazy" decoding="async">
                 </button>
-                <button type="button" class="venue-photo" aria-label="{{event.aria-label4}}">{{event.space1}}<img src="images/park-real-1.webp" alt="{{event.alt3}}" width="1360" height="1020" loading="lazy">{{event.space2}}</button>
-                <button type="button" class="venue-photo" aria-label="{{event.aria-label5}}">{{event.space3}}<img src="images/park-real-2.webp" alt="{{event.alt4}}" width="1360" height="1020" loading="lazy">{{event.space4}}</button>
+                <button type="button" class="venue-photo" aria-label="{{event.aria-label4}}"><img src="images/park-real-1.webp" alt="{{event.alt3}}" width="1360" height="1020" loading="lazy"></button>
+                <button type="button" class="venue-photo" aria-label="{{event.aria-label5}}"><img src="images/park-real-2.webp" alt="{{event.alt4}}" width="1360" height="1020" loading="lazy"></button>
                 <button type="button" class="venue-photo" aria-label="{{event.aria-label6}}">
                   <img src="images/park-real-3.webp" alt="{{event.alt5}}" width="1360" height="1020" loading="lazy">
                 </button>
-                <button type="button" class="venue-photo" aria-label="{{event.aria-label7}}">{{event.space5}}<img src="images/park-real-4.webp" alt="{{event.alt6}}" width="1360" height="1020" loading="lazy">{{event.space6}}</button>
+                <button type="button" class="venue-photo" aria-label="{{event.aria-label7}}"><img src="images/park-real-4.webp" alt="{{event.alt6}}" width="1360" height="1020" loading="lazy"></button>
                 <button type="button" class="venue-photo" aria-label="{{event.aria-label8}}">
                   <img src="images/park-real-6.webp" alt="{{event.alt7}}" width="1360" height="1020" loading="lazy" decoding="async">
                 </button>
@@ -444,7 +439,7 @@
               <h3>{{menu.t18}}<br>{{menu.t19}}</h3>
             </div>
             <div>
-              <p>{{menu.space1}}{{menu.t20}} <strong>{{menu.t21}}</strong> {{menu.t22}}{{menu.space2}}</p>
+              <p>{{menu.t20}} <strong>{{menu.t21}}</strong> {{menu.t22}}</p>
               <p><strong>{{menu.t23}}</strong> {{menu.t24}}</p>
             </div>
           </div>
@@ -863,7 +858,7 @@
         <div class="cooperation-grid">
           <article data-reveal="">
             <h3>{{cooperation.t5}}</h3>
-            <p>{{cooperation.space1}}{{cooperation.t6}} <strong>{{cooperation.t7}}</strong>{{cooperation.space2}}</p>
+            <p>{{cooperation.t6}} <strong>{{cooperation.t7}}</strong></p>
             <button class="text-button" data-info="support">{{cooperation.t8}}</button>
             <button class="button" data-contact="support" data-context="{{cooperation.data-context1}}">{{cooperation.t9}}</button>
           </article>
@@ -874,7 +869,7 @@
           </article>
           <article data-reveal="">
             <h3>{{cooperation.t13}}</h3>
-            <p>{{cooperation.space3}}{{cooperation.t14}} <strong>{{cooperation.t15}}</strong> {{cooperation.t16}}{{cooperation.space4}}</p>
+            <p>{{cooperation.t14}} <strong>{{cooperation.t15}}</strong> {{cooperation.t16}}</p>
             <button class="button" data-contact="talent" data-context="{{cooperation.data-context3}}">{{cooperation.t17}}</button>
           </article>
         </div>
@@ -1032,7 +1027,7 @@
         <button class="button outline" id="photo-next" aria-label="{{photo-modal.aria-label3}}">→</button>
       </div>
     </dialog>
-    <noscript><p class="container">{{page.space1}}{{page.t23}} <a href="https://t.me/panda_dp">{{page.t24}}</a>.{{page.space2}}</p></noscript>
+    <noscript><p class="container">{{page.t23}} <a href="https://t.me/panda_dp">{{page.t24}}</a>.</p></noscript>
     <script defer src="js/app.js"></script>
   </body>
 </html>
