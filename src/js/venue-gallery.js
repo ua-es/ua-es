@@ -5,6 +5,8 @@
   const track = gallery.querySelector(".venue-track");
   const photos = [...gallery.querySelectorAll(".venue-photo")];
   const caption = gallery.querySelector(".venue-caption");
+  if (!track || !caption || photos.length === 0) return;
+
   const prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
   let activePhotoIndex = 0;
   let previouslyFocusedPhoto = null;
