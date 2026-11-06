@@ -36,7 +36,7 @@ if (language) {
 
     // Resolve against site root, not current page, to avoid
     // adding language prefix to the URL (e.g., /ru/en instead of /en)
-    const siteRoot = "https://ua-es.github.io/ua-es/";
+    const siteRoot = document.baseURI;
     const destination = new URL(page, siteRoot);
     destination.hash = location.hash;
     location.assign(destination.href);
