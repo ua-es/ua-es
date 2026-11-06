@@ -42,7 +42,7 @@
   function renderLightboxPhoto() {
     const sourceImage = photos[activePhotoIndex].querySelector("img");
     const lightboxImage = lightbox.querySelector(".venue-lightbox-image");
-    lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+    lightboxImage.src = sourceImage.src;
     lightboxImage.alt = sourceImage.alt;
     lightbox.querySelector(".venue-lightbox-caption").textContent = sourceImage.alt;
     lightbox.querySelector(".venue-lightbox-counter").textContent =

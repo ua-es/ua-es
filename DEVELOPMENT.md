@@ -128,3 +128,11 @@ Actions).
 
 There is no `make deploy` target. A deployment can also be started manually
 from the Actions tab (`workflow_dispatch`).
+
+### Responsive photographs
+
+The original photographs remain in `images/` for lightboxes. Smaller 480px and
+800px WebP files are listed in `src/data/responsive-images.json` and referenced
+by the template's `srcset` attributes. To regenerate them, install the WebP
+command-line tools (`cwebp`), then run `npm run images:generate` and `npm run build`.
+Keep the template's width descriptors and `sizes` consistent with the layout.

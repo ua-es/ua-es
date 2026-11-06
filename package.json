@@ -1,7 +1,7 @@
 {
   "name": "picnuc.ua.es",
   "version": "1.0.0",
-  "description": "Website of the Тепла зустріч community: meetings of Ukrainians and friends in Spain",
+  "description": "Website of the \u0422\u0435\u043f\u043b\u0430 \u0437\u0443\u0441\u0442\u0440\u0456\u0447 community: meetings of Ukrainians and friends in Spain",
   "type": "module",
   "scripts": {
     "build": "node build.js",
@@ -10,14 +10,15 @@
     "test:unit": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
     "format": "prettier --write build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
-    "format:check": "prettier --check build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml"
+    "format:check": "prettier --check build.js tools src/content src/js src/locales src/css tests playwright.config.js .github/workflows/quality.yml",
+    "images:generate": "node tools/generate-responsive-images.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ua-es/ua-es.git"
   },
   "keywords": [],
-  "author": "Тепла зустріч",
+  "author": "\u0422\u0435\u043f\u043b\u0430 \u0437\u0443\u0441\u0442\u0440\u0456\u0447",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/ua-es/ua-es/issues"
