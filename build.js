@@ -16,6 +16,7 @@
 // ============================================================
 
 import * as esbuild from "esbuild";
+import { checkBundleSize } from "./tools/bundle-budget.js";
 import { mkdir, readFile, writeFile, watch } from "node:fs/promises";
 import { dirname } from "node:path";
 import { readdirSync } from "node:fs";
@@ -24,17 +25,6 @@ import { languageVariables, renderPage, renderSitemap } from "./tools/render-pag
 const isWatch = process.argv.includes("--watch");
 
 // ── Budget ─────────────────────────────────────────────────────────────────
-
-const MAX_BUNDLE_KB = 200;
-
-function checkBundleSize(out, code) {
-  const kb = Buffer.byteLength(code, "utf8") / 1024;
-  if (kb > MAX_BUNDLE_KB) {
-    console.warn(
-      `  WARNING: ${out} exceeds budget: ${kb.toFixed(1)} KB (limit ${MAX_BUNDLE_KB} KB)`
-    );
-  }
-}
 
 // ── JS bundles definition ──────────────────────────────────────────────────
 
@@ -135,6 +125,7 @@ async function buildLocaleBundle({ src, out }) {
     charset: "utf8",
     loader: "js",
   });
+  checkBundleSize(out, result.code, "locale");
   await writeFile(out, result.code, "utf8");
   const kb = (result.code.length / 1024).toFixed(1);
   console.log(`  ✓ ${out.padEnd(28)} ${kb} KB`);
